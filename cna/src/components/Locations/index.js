@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import {usePluginData} from '@docusaurus/useGlobalData';
 
 const LocationList = [
   {
@@ -22,6 +23,7 @@ const LocationList = [
 ];
 
 function Location({Svg, location}) {
+  const {testData} = usePluginData('location-overview-plugin');
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -29,6 +31,7 @@ function Location({Svg, location}) {
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{location}</Heading>
+        <p>{testData}</p>
       </div>
     </div>
   );

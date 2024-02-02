@@ -34,6 +34,46 @@ const config = {
     locales: ['de', 'en'],
   },
 
+  plugins: [
+    async function locationOverviewPlugin(context, options) {
+      return {
+        name: 'location-overview-plugin',
+        async loadContent() {
+          const fs = require('fs');
+          const path = require('path');
+
+          const files = fs.readdirSync("./locations/graz");
+          const currentDate = new Date();
+
+          const dateFiles = files.filter(file => /^\d{8}\.md$/.test(file));
+
+          let closestDate = Infinity;
+          let closestFile = null;
+
+          dateFiles.forEach(file => {
+            const fileDateString = new Date(file.substring(0, 8));
+            const year = Number(file.substring(0, 4));
+            const month = Number(file.substring(4, 6))-1;
+            const day = Number(file.substring(6, 8));
+            const fileDate = new Date(year, month, day);
+            // Check if the file date is in the future and closer than the current closest date
+            if (fileDate > currentDate && fileDate < closestDate) {
+              closestDate = fileDate;
+              closestFile = file;
+            }
+          });
+
+          // Return the closest file as a string
+          return closestDate.toDateString();
+        },
+        async contentLoaded({content, actions}) {
+          const {setGlobalData} = actions;
+          setGlobalData({testData: content});
+        },
+      };
+    },
+  ],
+
   presets: [
     [
       'classic',
