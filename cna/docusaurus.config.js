@@ -24,7 +24,7 @@ const config = {
   projectName: 'cna-website', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -41,34 +41,36 @@ const config = {
         async loadContent() {
           const fs = require('fs');
           const path = require('path');
-
-          const files = fs.readdirSync("./locations/graz");
+          
           const currentDate = new Date();
+          const locations = []; 
+          
+          const locationFolders = fs.readdirSync("./src/pages", { withFileTypes: true })
+            .filter(folder => folder.isDirectory())
+            .map(folder => folder.name);
 
-          const dateFiles = files.filter(file => /^\d{8}\.md$/.test(file));
+          locationFolders.forEach(folder => {
+            const files = fs.readdirSync("./src/pages/"+folder);
+            const dateFiles = files.filter(file => /^\d{8}\.md$/.test(file));
+            const startDate = Number(new Date(2024,1,1));
 
-          let closestDate = Infinity;
-          let closestFile = null;
+            locations.push({
+              location: folder.charAt(0).toUpperCase() + folder.slice(1),
+              logo: '/img/'+folder+'.svg',
+              meetings: []
+            }); 
 
-          dateFiles.forEach(file => {
-            const fileDateString = new Date(file.substring(0, 8));
-            const year = Number(file.substring(0, 4));
-            const month = Number(file.substring(4, 6))-1;
-            const day = Number(file.substring(6, 8));
-            const fileDate = new Date(year, month, day);
-            // Check if the file date is in the future and closer than the current closest date
-            if (fileDate > currentDate && fileDate < closestDate) {
-              closestDate = fileDate;
-              closestFile = file;
-            }
+            dateFiles.forEach(file => {
+              const fileDateString = file.substring(0, 8);
+              locations[locations.length-1].meetings.push(fileDateString); 
+            });
           });
 
-          // Return the closest file as a string
-          return closestDate.toDateString();
+          return locations;
         },
         async contentLoaded({content, actions}) {
           const {setGlobalData} = actions;
-          setGlobalData({testData: content});
+          setGlobalData({locations: content});
         },
       };
     },
@@ -150,7 +152,7 @@ const config = {
                 href: 'https://community.cncf.io/graz/',
               },
               {
-                label: 'Slack (CNCF #graz channel)',
+                label: 'Cloud Native CNCF Slack',
                 href: 'https://communityinviter.com/apps/cloud-native/cncf',
               },
             ],
