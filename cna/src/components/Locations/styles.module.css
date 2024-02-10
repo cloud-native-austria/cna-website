@@ -9,18 +9,3 @@
   height: 200px;
   width: 200px;
 }
-
-.locationtable {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.locationtable td {
-  padding: 10px;
-  text-align: center;
-  transition: width 0.3s;
-}
-
-.locationtable td:hover {
-  width: 120px;
-}

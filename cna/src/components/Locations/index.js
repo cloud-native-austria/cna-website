@@ -13,17 +13,19 @@ function Location({logo, location, start, meetings}) {
     for(let i = 0; i < meetings.length; i++) {
       const actualMeetingDate = new Date(
           Number(meetings[i].substring(0, 4)),
-          Number(meetings[i].substring(4, 6)),
-          Number(meetings[i].substring(6, 8))
+          Number(meetings[i].substring(4, 6))-1,
+          Number(meetings[i].substring(6, 8)),
+          23,59,59
       );
-      if(currentDate < actualMeetingDate && actualMeetingDate < nextMeeting) {
+      console.log(actualMeetingDate.toString());
+      if(currentDate <= actualMeetingDate && actualMeetingDate < nextMeeting) {
         nextMeeting = actualMeetingDate;
         nextMeetingString = actualMeetingDate.toDateString();
       }
     };
   }
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--3')}>
       <a href={location}>
         <div className="text--center">
           <img className={styles.locationSvg} src={useBaseUrl(logo)} />
@@ -43,16 +45,10 @@ export default function Locations() {
   return (
     <section className={styles.locations}>
       <div className="container">
-        <div className={styles.locationtable}>
-          <table> 
-            <tr>
-              {locations.map((props, idx) => (
-                <td>
-                  <Location key={idx} {...props} />
-                </td>
-              ))}
-            </tr>
-          </table>
+        <div className="row">
+          {locations.map((props, idx) => (
+              <Location key={idx} {...props} />
+          ))}
         </div>
       </div>
     </section>
