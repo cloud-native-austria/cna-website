@@ -2,7 +2,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Locations from '@site/src/components/Locations';
 
-
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -10,7 +9,7 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="Cloud Native Austria">
       <main>
-        <Locations />
+          <Locations />
       </main>
     </Layout>
   );

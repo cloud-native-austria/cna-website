@@ -3,13 +3,14 @@ import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import {usePluginData} from '@docusaurus/useGlobalData';
+import { Link } from 'react-router-dom';
 
-function Location({logo, location, start, meetings}) {
-  let nextMeetingString = 'TBD'; 
+function Location({logo, locationName, location, meetings}) {
+  let nextMeetingString = 'TBD';
+  let nextMeetingPath = location;
   if (meetings.length > 0) {
     let nextMeeting = Infinity;
     const currentDate = new Date();
-    console.log(meetings);
     for(let i = 0; i < meetings.length; i++) {
       const actualMeetingDate = new Date(
           Number(meetings[i].substring(0, 4)),
@@ -17,25 +18,30 @@ function Location({logo, location, start, meetings}) {
           Number(meetings[i].substring(6, 8)),
           23,59,59
       );
-      console.log(actualMeetingDate.toString());
       if(currentDate <= actualMeetingDate && actualMeetingDate < nextMeeting) {
         nextMeeting = actualMeetingDate;
+        nextMeetingPath = meetings[i];
         nextMeetingString = actualMeetingDate.toDateString();
       }
     };
   }
+  if (nextMeetingPath !== location) {
+    nextMeetingPath = location + "/" + nextMeetingPath;
+  } 
   return (
     <div className={clsx('col col--3')}>
-      <a href={location}>
-        <div className="text--center">
+      <div className={styles.location}>
+        <Link to={location}>
           <img className={styles.locationSvg} src={useBaseUrl(logo)} />
-        </div>
+          <div className="text--center padding-horiz--md">
+            <Heading as="h1">{location}</Heading>
+          </div>
+        </Link>
         <div className="text--center padding-horiz--md">
-          <Heading as="h2">{location}</Heading>
-          <p>Next Meetup:</p>
-          {nextMeetingString}
+          Next Meetup:<br />
+          <Link className="margin-bottom--lg padding--md button button--primary" to={nextMeetingPath}>{nextMeetingString}</Link>
         </div>
-      </a>
+      </div>
     </div>
   );
 }

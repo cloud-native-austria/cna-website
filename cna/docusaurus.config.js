@@ -30,8 +30,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'de',
-    locales: ['de', 'en'],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   plugins: [
@@ -40,9 +40,7 @@ const config = {
         name: 'location-overview-plugin',
         async loadContent() {
           const fs = require('fs');
-          const path = require('path');
           
-          const currentDate = new Date();
           const locations = []; 
           
           const locationFolders = fs.readdirSync("./src/pages", { withFileTypes: true })
@@ -51,10 +49,14 @@ const config = {
 
           locationFolders.forEach(folder => {
             const files = fs.readdirSync("./src/pages/"+folder);
-            const dateFiles = files.filter(file => /^\d{8}\.md$/.test(file));
-            const startDate = Number(new Date(2024,1,1));
+            const dateFiles = files.filter(file => /^\d{8}\.md$/.test(file)).reverse();
+
+            const fileContent = fs.readFileSync("./src/pages/"+folder+"/description.md", 'utf8');
+            const firstLine = fileContent.split('\n')[0];
+            const locationName = firstLine.slice(2);
 
             locations.push({
+              locationName: locationName,
               location: folder.charAt(0).toUpperCase() + folder.slice(1),
               logo: '/img/'+folder+'.svg',
               meetings: []
@@ -108,14 +110,14 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'clubSidebar',
+            sidebarId: 'associationSidebar',
             position: 'left',
-            label: 'Club',
+            label: 'Association',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/cloud-native-austria',
-            label: 'GitHub',
+            label: 'CNA GitHub',
             position: 'right',
           },
         ],
@@ -127,7 +129,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Club',
+                label: 'Association',
                 to: '/docs/intro',
               },
             ],
@@ -136,17 +138,9 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Meetup',
-                href: 'https://www.meetup.com/cncf-graz/',
-              },
-              {
-                label: 'CNCF Community Graz',
-                href: 'https://community.cncf.io/graz/',
-              },
-              {
-                label: 'Cloud Native CNCF Slack',
+                label: 'CNCF Slack',
                 href: 'https://communityinviter.com/apps/cloud-native/cncf',
-              },
+              }
             ],
           },
           {
@@ -157,8 +151,8 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/cloud-native-austria'
+                label: 'Contribute to this page',
+                href: 'https://github.com/cloud-native-austria/cna-website'
               },
             ],
           },
