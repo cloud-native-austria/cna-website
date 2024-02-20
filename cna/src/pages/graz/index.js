@@ -16,6 +16,25 @@ export default function Chapter() {
     let nextMeeting = Infinity;
     const currentDate = new Date();
     let nextMeetingString = "";
+
+    if (currentLocation.length === 0) {
+      return (
+        <Layout
+            title={`${siteConfig.title}`}
+            description="Cloud Native Austria"
+        >
+          <main>
+            <div className="container">
+              <section className="row">
+                <div className="col col--9">
+                    <Description />
+                </div>
+              </section>
+            </div>
+          </main>
+        </Layout>
+      );
+    }
     for(let i = 0; i < currentLocation[0].meetings.length; i++) {
       const actualMeetingDate = new Date(
           Number(currentLocation[0].meetings[i].substring(0, 4)),
