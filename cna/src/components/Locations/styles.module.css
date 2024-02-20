@@ -12,4 +12,13 @@
 .locationSvg {
   height: 300px;
   width: 300px;
+  align-items: center;
+  align-content: center;
+}
+
+.locationHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }

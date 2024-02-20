@@ -5,7 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import {usePluginData} from '@docusaurus/useGlobalData';
 import { Link } from 'react-router-dom';
 
-function Location({logo, locationName, location, meetings}) {
+function Location({logo, location, meetings}) {
   let nextMeetingString = 'TBD';
   let nextMeetingPath = location;
   if (meetings.length > 0) {
@@ -29,12 +29,14 @@ function Location({logo, locationName, location, meetings}) {
     nextMeetingPath = location + "/" + nextMeetingPath;
   } 
   return (
-    <div className={clsx('col col--3')}>
+    <div className={clsx('col col--12')}>
       <div className={styles.location}>
         <Link to={location}>
-          <img className={styles.locationSvg} src={useBaseUrl(logo)} />
-          <div className="text--center padding-horiz--md">
-            <Heading as="h1">{location}</Heading>
+          <div className={styles.locationHeader}>
+            <img className={styles.locationSvg} src={useBaseUrl(logo)} />
+            <div className="text--center padding-horiz--md">
+              <Heading as="h1">{location}</Heading>
+            </div>
           </div>
         </Link>
         <div className="text--center padding-horiz--md">
