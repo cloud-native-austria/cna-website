@@ -151,8 +151,8 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'Contribute to this page',
-                href: 'https://github.com/cloud-native-austria/cna-website'
+                label: 'Impressum',
+                href: '/impressum'
               },
             ],
           },
