@@ -40,9 +40,9 @@ const config = {
         name: 'location-overview-plugin',
         async loadContent() {
           const fs = require('fs');
-          
-          const locations = []; 
-          
+
+          const locations = [];
+
           const locationFolders = fs.readdirSync("./src/pages", { withFileTypes: true })
             .filter(folder => folder.isDirectory())
             .map(folder => folder.name);
@@ -60,11 +60,11 @@ const config = {
               location: folder.charAt(0).toUpperCase() + folder.slice(1),
               logo: '/img/'+folder+'.svg',
               meetings: []
-            }); 
+            });
 
             dateFiles.forEach(file => {
               const fileDateString = file.substring(0, 8);
-              locations[locations.length-1].meetings.push(fileDateString); 
+              locations[locations.length-1].meetings.push(fileDateString);
             });
           });
 
@@ -153,6 +153,10 @@ const config = {
               {
                 label: 'Impressum',
                 href: '/impressum'
+              },
+              {
+                label: 'Data Privacy',
+                href: '/data-privacy'
               },
             ],
           },
