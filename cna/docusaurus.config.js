@@ -152,7 +152,7 @@ const config = {
               },
               {
                 label: 'Impressum',
-                href: '/impressum'
+                href: '/imprint'
               },
               {
                 label: 'Data Privacy',

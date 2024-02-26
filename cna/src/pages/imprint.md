@@ -1,5 +1,5 @@
 ---
-title: Impressum & Data Privacy
+title: Impressum
 ---
 
 ## Impressum
