@@ -1,0 +1,34 @@
+.base {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    gap: 2rem;
+    width: 100%;
+}
+
+.headers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.headers div * {
+    margin-bottom: .5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.logoSvg {
+    max-height: 500px;
+    max-width: 500px;
+    align-items: center;
+    align-content: center;
+}

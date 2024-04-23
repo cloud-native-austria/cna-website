@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import {usePluginData} from '@docusaurus/useGlobalData';
+import { usePluginData } from '@docusaurus/useGlobalData';
 import { Link } from 'react-router-dom';
 
 function Location({logo, location, meetings}) {
@@ -27,7 +27,7 @@ function Location({logo, location, meetings}) {
   }
   if (nextMeetingPath !== location) {
     nextMeetingPath = location + "/" + nextMeetingPath;
-  } 
+  }
   return (
     <div className={clsx('col col--12')}>
       <div className={styles.location}>
