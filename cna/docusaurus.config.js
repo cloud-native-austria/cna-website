@@ -116,6 +116,7 @@ const config = {
             label: 'Association',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/docs/sponsoring', label: 'Sponsoring', position: 'left'},
           {
             href: 'https://github.com/cloud-native-austria',
             label: 'CNA GitHub',
