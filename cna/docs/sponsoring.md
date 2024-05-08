@@ -19,7 +19,7 @@ Your company logo and a link to your website will be featured prominently on our
 We will mention your company at each Cloud Native Austria event, highlighting your support and contribution as a Friend of Cloud Native Austria. 
 This includes all workshops, meetups, and conferences we organize or participate in throughout the year.
 - **Social Media Engagement:**
-We will mention your company in a quarterly social media post across all our platforms including LinkedIn, Twitter, and Facebook. 
+We will highlight your company at least twice a year in social media post across all our platforms. 
 This will not only increase your visibility within the community but also showcase your dedication to advancing cloud-native technologies in Austria.
 
 ## Why Sponsor?

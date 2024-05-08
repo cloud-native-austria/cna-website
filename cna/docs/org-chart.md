@@ -36,11 +36,3 @@ Auditors are responsible for reviewing the association's accounts to ensure accu
 
 - TBD
 
-## General Members
-
-Members are crucial as they contribute to the diversity and vitality of the association.
-
-| Vorname   | Nachname |
-| --------  | ------- |
-| Hello     | World    |
-| Foo       | Bar     |
