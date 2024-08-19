@@ -15,6 +15,12 @@ Font: [Roboto](https://fonts.google.com/specimen/Roboto)
 - Body Text: Roboto Regular or Light
 
 ## How to run it
+```
+git checkout ...
+cd cna-website/cna
+npm ci
+npm run start
+```
 
 This page is build using [Docusaurus](https://docusaurus.io).
 
