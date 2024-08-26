@@ -7,32 +7,32 @@ Below is the current organizational chart of the association.
 
 The Board of Directors provides strategic leadership and ensures the association adheres to its mission and vision.
 
-- **Chairman**: Thomas Schütz
+- **Chairman**: Erik Auer
   - Leads the association and oversees all operational aspects.
 - **Secretary**: Daniel Drack
   - Handles all administrative duties including meeting minutes and correspondence.
-- **Treasurer**: Erik Auer
+- **Treasurer**: Thomas Stagl
   - Manages the finances of the association, including budgeting and financial reporting.
 
 ## Deputy Roles
 
 Deputy roles are designed to assist and step in for their primary counterparts as needed.
 
-- **Deputy Chairman**: vacant
+- **Deputy Chairman**: Thomas Schütz
   - Assists the Chairman and substitutes when the Chairman is unavailable.
 - **Deputy Secretary**: vacant
   - Supports the Secretary in all administrative tasks and acts as a substitute when required.
-- **Deputy Treasurer**: vacant
+- **Deputy Treasurer**: Johannes Grumböck
   - Aids the Treasurer in managing the association's financial tasks and assumes responsibilities in their absence.
 
 ## Auditors
 
 Auditors are responsible for reviewing the association's accounts to ensure accuracy and compliance with legal standards.
 
-- **Auditor 1**: Johannes Grumböck
-- **Auditor 2**: Thomas Stagl
+- **Auditor 1**: Constanze Roedig
+- **Auditor 2**: Andreas Grabner
 
 ## Friends of Cloud Native Austria
 
-- TBD
+- Exoscale 
 
