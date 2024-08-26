@@ -136,7 +136,7 @@ const config = {
             position: 'left',
             label: 'Association',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          /* {to: '/blog', label: 'Blog', position: 'left'}, */
           {to: '/docs/sponsoring', label: 'Sponsoring', position: 'left'},
           {
             href: 'https://github.com/cloud-native-austria',
