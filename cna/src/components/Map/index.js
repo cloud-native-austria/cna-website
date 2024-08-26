@@ -19,10 +19,10 @@ export default function Map() {
       <div className="container">
         <div className={styles.mapContainer}>
           <img src={useBaseUrl('/img/map.svg')} />
-          <Pin logo='/img/logo.svg' name='Vienna' page='graz' left='85.5%' top='38%' />
+          <Pin logo='/img/vienna.png' name='Vienna' page='graz' left='85.5%' top='38%' />
           <Pin logo='/img/graz.svg' name='Graz' page='graz' left='74%' top='76%' />
-          <Pin logo='/img/logo.svg' name='Salzburg' page='graz' left='45%' top='49%' />
-          <Pin logo='/img/logo.svg' name='Linz' page='graz' left='64%' top='33%' />
+          <Pin logo='/img/cncg.svg' name='Salzburg' page='graz' left='45%' top='49%' />
+          <Pin logo='/img/cncg.svg' name='Linz' page='graz' left='64%' top='33%' />
         </div>
       </div>
     </div>
