@@ -149,7 +149,7 @@ const config = {
               },
             ],
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/cloud-native-austria',
             label: 'CNA GitHub',
