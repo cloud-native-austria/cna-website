@@ -37,8 +37,17 @@ export default function Carousel() {
   return (
     <div className="container">
       <Slider {...settings}>
-        <Slide logo='/img/kcd.webp' headline='KCD Austria 2024' text='Tickets available soon! Make sure to keep up to date with the website to get in on the sweet sweet early bird deals!' url='https://kcdaustria.at' />
-        <Slide logo='/img/graz.svg' headline='April Meetup Graz' text='Come join us at the april meetup of the CNCF Graz community!' url='graz' />
+        <Slide 
+            logo='/img/kcd.webp'
+            headline='KCD Austria 2024'
+            text='<p>On October 8th - 10th the Kubernetes & Cloud Native community will gather in Vienna, Austria.</p><br><p>Join us for a three-day technical event loaded with exciting talks, workshops and networking opportunities. KCD Austria is aimed at developers, platform people, and other IT professionals interested in cloud native technologies. This community event is supported by the CNCF.</p>' 
+            url='https://kcdaustria.at'
+        />
+        <Slide 
+            logo='/img/graz.svg'
+            headline='April Meetup Graz'
+            text='Come join us at the april meetup of the CNCF Graz community!'
+            url='graz' />
       </Slider>
     </div>
   );
