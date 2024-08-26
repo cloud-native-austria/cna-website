@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://cna-website.github.io',
+  url: 'https://cloud-native.at',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -32,7 +32,24 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'de'],
+    path: 'i18n',
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+        path: 'en',
+      },
+      de: {
+        label: 'Deutsch',
+        direction: 'ltr',
+        htmlLang: 'de-DE',
+        calendar: 'gregory',
+        path: 'de',
+      },
+    },
   },
 
   plugins: [
@@ -97,7 +114,7 @@ const config = {
     ],
   ],
 
-  themeConfig:
+       themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
@@ -109,13 +126,18 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          /* {
+            type: 'localeDropdown',
+            position: 'left',
+          }, */
           {
             type: 'docSidebar',
             sidebarId: 'associationSidebar',
             position: 'left',
             label: 'Association',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          /* {to: '/blog', label: 'Blog', position: 'left'}, */
+          {to: '/docs/sponsoring', label: 'Sponsoring', position: 'left'},
           {
             href: 'https://github.com/cloud-native-austria',
             label: 'CNA GitHub',
@@ -147,6 +169,10 @@ const config = {
           {
             title: 'More',
             items: [
+              {
+                label: 'Impressum',
+                to: '/data-privacy',
+              },
               {
                 label: 'Blog',
                 to: '/blog',
