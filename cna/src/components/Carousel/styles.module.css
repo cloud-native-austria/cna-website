@@ -1,0 +1,32 @@
+.slider {
+    padding: 2rem 0 3rem;
+}
+
+.slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    gap: 2rem;
+    width: 100%;
+}
+
+.citem {
+    background-color: bisque;
+}
+
+.slideIcon img {
+    max-width: 100%;
+}
+
+.slideSVG {
+    max-height: 500px;
+    max-width: 500px;
+    align-items: end;
+    align-content: end;
+}
+
+.slideText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
