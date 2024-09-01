@@ -1,3 +1,21 @@
+.base {
+    /* background-color: rgb(15, 146, 81); */
+    display: flex;
+    background-color: #dcf5fe;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+[data-theme='dark'] {
+  .base {
+    background-color: #094163;
+    img {
+      opacity: 0.7;
+    }
+  }
+}
+
 .slider {
     padding: 2rem 0 3rem;
 }

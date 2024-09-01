@@ -121,10 +121,6 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Cloud Native Austria',
-        logo: {
-          alt: 'CNA Logo',
-          src: 'img/logo.svg',
-        },
         items: [
           /* {
             type: 'localeDropdown',
