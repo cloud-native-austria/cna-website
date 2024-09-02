@@ -20,6 +20,13 @@
   --ifm-footer-link-color: #ffffff;
   --ifm-footer-color: #052234;
 
+  .clean-btn {
+    color: #ffffff;
+  }
+
+  @media screen and (max-width: 480px) {
+    --ifm-menu-color: #ffffff;
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
