@@ -33,4 +33,9 @@
     width: 15%;
     transform: translateY(0%) translateX(30%);
     background-color: transparent;
+
+    @media screen and (max-width: 480px) {
+        font-size: 1em;
+        margin-top: -1.2em;
+    }
 }
