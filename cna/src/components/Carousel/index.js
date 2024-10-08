@@ -46,9 +46,9 @@ export default function Carousel() {
           />
           <Slide
               logo='/img/graz.svg'
-              headline='September Meetup Graz'
-              text='Come join us at the September meetup of the CNCF Graz community!'
-              url='graz' />
+              headline='October Meetup Graz'
+              text='Come join us at the October meetup of the CNCF Graz community!'
+              url='graz/20241017' />
         </Slider>
       </div>
     </div>

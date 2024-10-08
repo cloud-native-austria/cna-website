@@ -9,6 +9,22 @@
   .bannerImage {
     opacity: 0.5;
   }
+  .bannerImageMobile {
+    opacity: 0.5;
+  }
+}
+
+.bannerImage {
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+}
+
+.bannerImageMobile {
+    display: none;
+    @media screen and (max-width: 480px) {
+      display: flex;
+    }
 }
 
 .mapContainer {
@@ -23,6 +39,11 @@
     width: 15%;
     transform: translateY(0%) translateX(180%);
     background-color: transparent;
+    @media screen and (max-width: 480px) {
+      display: flex;
+      width: 40%;
+      transform: translateY(-40%) translateX(120%);
+    }
 }
 
 .bannerText {
@@ -35,7 +56,7 @@
     background-color: transparent;
 
     @media screen and (max-width: 480px) {
-        font-size: 1em;
-        margin-top: -1.2em;
+        font-size: 2em;
+        margin-left: 1em;
     }
 }

@@ -181,10 +181,10 @@ const config = {
                 label: 'Impressum',
                 to: '/data-privacy',
               },
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'Contribute to this page',
                 href: 'https://github.com/cloud-native-austria/cna-website'

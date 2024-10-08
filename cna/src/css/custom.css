@@ -24,7 +24,7 @@
     color: #ffffff;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 995px) {
     --ifm-menu-color: #ffffff;
   }
 }
