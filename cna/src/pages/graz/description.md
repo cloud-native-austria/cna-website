@@ -1,7 +1,5 @@
 # Graz
 
-## History
-
 The journey of the CNCF Community Chapter Graz is like a well-coded script that's come to life, evolving from its initial commit in winter 2020 to a feature-rich community project by mid-2022. Let's debug the timeline and see how this awesome group bootstrapped itself into existence.
 
 - Winter 2020: Picture this: the early lines of code (well, ideas really) were written by Daniel Drack, diving deep into the world of master thesis expert interviews. Little did he know, he was laying down the foundation of what would become a thriving community.
@@ -21,6 +19,8 @@ The journey of the CNCF Community Chapter Graz is like a well-coded script that'
 So there you have it, the CNCF Community Chapter Graz's journey from a fledgling idea to a powerhouse of cloud-native enthusiasts. It's been a path filled with learning, sharing, and quite a bit of fun – proving that when techies come together, awesome things happen. Here's to more commits, meetups, and cloud-native adventures ahead!
 
 ## Where can we be found?
+
+[Github](https://github.com/cloud-native-austria/cncf-graz)
 
 [Meetup](https://www.meetup.com/cncf-graz/)
 

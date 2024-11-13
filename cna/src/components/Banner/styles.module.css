@@ -14,19 +14,6 @@
   }
 }
 
-.bannerImage {
-    @media screen and (max-width: 480px) {
-      display: none;
-    }
-}
-
-.bannerImageMobile {
-    display: none;
-    @media screen and (max-width: 480px) {
-      display: flex;
-    }
-}
-
 .mapContainer {
     position: relative;
 }
@@ -41,12 +28,14 @@
     background-color: transparent;
     @media screen and (max-width: 480px) {
       display: flex;
-      width: 40%;
-      transform: translateY(-40%) translateX(120%);
+      width: 15%;
+      transform: translateY(-10%) translateX(180%);
     }
 }
 
 .bannerText {
+    font-size: 4em;
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,8 +44,21 @@
     transform: translateY(0%) translateX(30%);
     background-color: transparent;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 1690px) {
+        font-size: 3em;
+    }
+    @media screen and (max-width: 1200px) {
         font-size: 2em;
-        margin-left: 1em;
+    }
+    @media screen and (max-width: 800px) {
+        font-size: 1.4em;
+    }
+    @media screen and (max-width: 670px) {
+        font-size: 1em;
+        margin-top: 2em;
+    }
+    @media screen and (max-width: 670px) {
+        font-size: 0.8em;
+        margin-top: 2em;
     }
 }
