@@ -9,9 +9,10 @@
   .bannerImage {
     opacity: 0.5;
   }
-  .bannerImageMobile {
-    opacity: 0.5;
-  }
+}
+
+.bannerImage {
+    opacity: 1;
 }
 
 .mapContainer {

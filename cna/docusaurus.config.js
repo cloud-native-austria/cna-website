@@ -143,6 +143,18 @@ const config = {
                 label: 'Graz',
                 to: '/graz',
               },
+              {
+                label: 'Innsbruck',
+                to: '/innsbruck',
+              },
+              {
+                label: 'Linz',
+                to: '/linz',
+              },
+              {
+                label: 'Vienna',
+                to: '/vienna',
+              },
             ],
           },
           // {to: '/blog', label: 'Blog', position: 'left'},

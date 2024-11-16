@@ -17,7 +17,6 @@ export default function Chapter() {
     const currentDate = new Date();
     let nextMeetingString = "";
 
-    // if (currentLocation.length === 0) {
       return (
         <Layout
             title={`${siteConfig.title}`}
@@ -34,40 +33,4 @@ export default function Chapter() {
           </main>
         </Layout>
       );
-    // }
-    // for(let i = 0; i < currentLocation[0].meetings.length; i++) {
-    //   const actualMeetingDate = new Date(
-    //       Number(currentLocation[0].meetings[i].substring(0, 4)),
-    //       Number(currentLocation[0].meetings[i].substring(4, 6))-1,
-    //       Number(currentLocation[0].meetings[i].substring(6, 8)),
-    //       23,59,59
-    //   );
-    //   if(currentDate <= actualMeetingDate && actualMeetingDate < nextMeeting) {
-    //     nextMeeting = actualMeetingDate;
-    //     nextMeetingString = currentLocation[0].meetings[i];
-    //   }
-    // };
-    // return (
-    //     <Layout
-    //         title={`${siteConfig.title}`}
-    //         description="Cloud Native Austria"
-    //     >
-    //       <main>
-    //         <div className="container">
-    //           <section className="row">
-    //             <div className="col col--9">
-    //                 <Description />
-    //             </div>
-    //             <div className="col col--3">
-    //                 Meetups:
-    //                   {currentLocation.flatMap(loc => loc.meetings.map((meeting, idx) => (
-    //                       <Meeting key={idx} location={currentPath} date={meeting} isNext={meeting === nextMeetingString} />
-    //                     )))
-    //                   }
-    //             </div>
-    //           </section>
-    //         </div>
-    //       </main>
-    //     </Layout>
-    // );
   }
