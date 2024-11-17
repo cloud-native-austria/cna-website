@@ -35,5 +35,7 @@ Your support helps us provide a platform for innovation, learning, and collabora
 
 ## Join Us Today!
 
-To become a Friend of Cloud Native Austria, please contact us at ingress@cloud-native.at.
+To become a Friend of Cloud Native Austria, please contact us at ingress@cloud-native.at.  
+Need a shiny sponsor prospectus? 
+Have a look [here](./assets/CNA-Sponsor-Prospectus.pdf)!  
 We look forward to partnering with you and building a stronger cloud-native community together!
