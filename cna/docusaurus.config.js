@@ -69,7 +69,7 @@ const config = {
             const files = fs.readdirSync("./src/pages/"+folder);
             const dateFiles = files.filter(file => /^\d{8}\.md$/.test(file)).reverse();
 
-            const fileContent = fs.readFileSync("./src/pages/"+folder+"/description.md", 'utf8');
+            const fileContent = fs.readFileSync("./src/pages/"+folder+"/description.mdx", 'utf8');
             const firstLine = fileContent.split('\n')[0];
             const locationName = firstLine.slice(2);
 
@@ -136,9 +136,13 @@ const config = {
           {to: '/docs/sponsoring', label: 'Sponsoring', position: 'left'},
           {
             type: 'dropdown',
-            label: 'Chapter',
+            label: 'Communities',
             position: 'left',
             items: [
+              {
+                type: 'html',
+                value: '<span>Sponsored</span>', // The HTML to be rendered
+              },
               {
                 label: 'Graz',
                 to: '/graz',
@@ -146,6 +150,14 @@ const config = {
               {
                 label: 'Innsbruck',
                 to: '/innsbruck',
+              },
+              {
+                type: 'html',
+                value: '<hr>', // The HTML to be rendered
+              },
+              {
+                type: 'html',
+                value: '<span>Endorsed</span>', // The HTML to be rendered
               },
               {
                 label: 'Linz',
