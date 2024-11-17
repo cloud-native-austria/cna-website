@@ -4,6 +4,7 @@ import Carousel from '@site/src/components/Carousel';
 import MapInteractive from '@site/src/components/MapInteractive';
 import Banner from '@site/src/components/Banner';
 import Sponsors from "@site/src/components/Sponsors";
+import IntroText from "../components/IntroText";
 
 export default function Home() {
     const {siteConfig} = useDocusaurusContext();
@@ -13,6 +14,7 @@ export default function Home() {
             description="Cloud Native Austria">
                 <main>
                     <Banner/>
+                    <IntroText />
                     <MapInteractive />
                     <Carousel/>
                     <Sponsors/>

@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #02233E;
+}
+
+.centeredParagraph {
+  margin: 0 auto; /* Centers the paragraph horizontally */
+  max-width: 60%; /* Restricts the paragraph's width to 80% of the viewport */
+  text-align: justify; /* Centers the text inside the paragraph */
+  font-size: 16px; /* Optional: Adjust font size */
+  line-height: 1.5; /* Optional: Improve readability */
+  padding: 10px; /* Optional: Add padding around the text */
+  color: #333; /* Optional: Text color */
+}
+
+.container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(242,117,1,0.2);
+}
