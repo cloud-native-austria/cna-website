@@ -1,11 +1,9 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import Locations from '@site/src/components/Locations';
 import Carousel from '@site/src/components/Carousel';
-import Map from '@site/src/components/Map';
 import MapInteractive from '@site/src/components/MapInteractive';
 import Banner from '@site/src/components/Banner';
-import MDXContent from '@theme/MDXContent';
+import Sponsors from "@site/src/components/Sponsors";
 
 export default function Home() {
     const {siteConfig} = useDocusaurusContext();
@@ -17,6 +15,7 @@ export default function Home() {
                     <Banner/>
                     <MapInteractive />
                     <Carousel/>
+                    <Sponsors/>
                 </main>
         </Layout>
     );
