@@ -1,0 +1,11 @@
+.description {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+}
