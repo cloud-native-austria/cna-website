@@ -19,6 +19,7 @@
   --ifm-footer-background-color: #0b507a;
   --ifm-footer-link-color: #ffffff;
   --ifm-footer-color: #052234;
+  --ifm-background-color: rgba(242, 117, 1, 0.2);
 
   .clean-btn {
     color: #ffffff;
@@ -42,8 +43,9 @@
   --ifm-navbar-background-color: #052234;
   --ifm-navbar-link-color: #ffffff;
   --ifm-footer-background-color: #052234;
-  --ifm-background-color: #03131d;
+  /*--ifm-background-color: #03131d;*/
   --ifm-footer-link-color: #ffffff;
   --ifm-footer-color: #ff9900;
+  --ifm-background-color: #052234;
 }
 
