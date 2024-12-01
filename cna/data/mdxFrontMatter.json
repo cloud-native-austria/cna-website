@@ -1,0 +1,54 @@
+[
+  {
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/graz/20241219.mdx",
+    "chapter": "graz",
+    "frontMatter": {
+      "id": "20241219,",
+      "title": "xmas Meetup Graz",
+      "community": "graz",
+      "date": "2024-12-19",
+      "timeStart": "6pm",
+      "timeEnd": "10pm",
+      "location": "Adventmarkt",
+      "locationAddress": "Mariahilferplatz, 8020 Graz",
+      "locationGmapsUrl": "https://maps.app.goo.gl/pfHivZWt6yAm8zyN8",
+      "locationOpenStreetUrl": "https://www.openstreetmap.org/relation/11511612",
+      "urlMeetup": "https://www.meetup.com/cncf-graz/events/304739580",
+      "urlBevy": "https://community.cncf.io/events/details/cncf-cloud-native-graz-presents-cncg-graz-december-meetup/"
+    }
+  },
+  {
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/graz/20250123.mdx",
+    "chapter": "graz",
+    "frontMatter": {
+      "id": "20250123,",
+      "title": "Meetup Graz January",
+      "date": "2025-01-23",
+      "timeStart": "5pm",
+      "timeEnd": "10pm",
+      "location": "SPACELEND",
+      "locationAddress": "Neubaugasse 24, 8020 Graz",
+      "locationGmapsUrl": "https://maps.app.goo.gl/SPysNWReHUbrEQBT6",
+      "locationOpenStreetUrl": "https://www.openstreetmap.org/node/8752516740",
+      "urlMeetup": "",
+      "urlBevy": ""
+    }
+  },
+  {
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/linz/20250115.mdx",
+    "chapter": "linz",
+    "frontMatter": {
+      "id": "20250115,",
+      "title": "Meetup Linz January",
+      "date": "2025-01-15",
+      "timeStart": "6pm",
+      "timeEnd": "10pm",
+      "location": "Public Cloud Group",
+      "locationAddress": "Tabakfabrik Linz, 10 Peter-Behrens-Platz, House CASABLANCA, 3. OG, Room: Startrampe, Linz, 4020",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "urlMeetup": "https://www.meetup.com/cloud-native-linz/events/304003701",
+      "urlBevy": "https://community.cncf.io/events/details/cncf-linz-presents-save-the-date-january-15th/"
+    }
+  }
+]
