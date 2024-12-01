@@ -19,6 +19,6 @@ A modest annual membership fee of €50 per person unlocks several exciting bene
 - Each member can use Cloud Native Austria resources (meetup.com, LinkedIn,..) to organise local events in Austria
 - Members are warmly invited to the annual general meeting, a great chance to have a say in the community’s direction.
 
-Beware, the financial support is taken from a joint budget pot. 
-The amount of the budget pot is decided each year. 
-Increases are possible. Payments are made on a first come, first serve basis. 
+Beware, the financial support is taken from a joint budget pot.
+The amount of the budget pot is decided each year.
+Increases are possible. Payments are made on a first come, first serve basis.

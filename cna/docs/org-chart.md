@@ -1,6 +1,6 @@
 # Organizational Chart of Cloud Native Austria
 
-Cloud Native Austria is structured to efficiently oversee and manage activities, ensuring a collaborative and productive environment within the Austrian cloud-native community. 
+Cloud Native Austria is structured to efficiently oversee and manage activities, ensuring a collaborative and productive environment within the Austrian cloud-native community.
 Below is the current organizational chart of the association.
 
 ## Board of Directors
@@ -34,5 +34,4 @@ Auditors are responsible for reviewing the association's accounts to ensure accu
 
 ## Friends of Cloud Native Austria
 
-- Exoscale 
-
+- Exoscale

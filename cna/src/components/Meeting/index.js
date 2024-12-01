@@ -8,7 +8,7 @@ export default function Meeting({location, date, isNext}) {
     Number(date.substring(4, 6))-1,
     Number(date.substring(6, 8)),
   ).toDateString();
-  const buttonBackgroundStyle = (isNext ? "margin-left--none" : "margin-left--lg") 
+  const buttonBackgroundStyle = (isNext ? "margin-left--none" : "margin-left--lg")
     + " button"
     + (isNext ? " button--primary" : " button--secondary");
   return (

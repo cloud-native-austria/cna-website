@@ -1,38 +1,38 @@
 {
-  "link.title.Docs": {
-    "message": "Docs",
-    "description": "The title of the footer links column with title=Docs in the footer"
-  },
-  "link.title.Community": {
-    "message": "Community",
-    "description": "The title of the footer links column with title=Community in the footer"
-  },
-  "link.title.More": {
-    "message": "More",
-    "description": "The title of the footer links column with title=More in the footer"
+  "copyright": {
+    "description": "The footer copyright",
+    "message": "Copyright © 2024 Cloud Native Austria"
   },
   "link.item.label.Association": {
-    "message": "Association",
-    "description": "The label of footer link with label=Association linking to /docs/intro"
-  },
-  "link.item.label.CNCF Slack": {
-    "message": "CNCF Slack",
-    "description": "The label of footer link with label=CNCF Slack linking to https://communityinviter.com/apps/cloud-native/cncf"
-  },
-  "link.item.label.Impressum": {
-    "message": "Impressum",
-    "description": "The label of footer link with label=Impressum linking to /data-privacy"
+    "description": "The label of footer link with label=Association linking to /docs/intro",
+    "message": "Association"
   },
   "link.item.label.Blog": {
-    "message": "Blog",
-    "description": "The label of footer link with label=Blog linking to /blog"
+    "description": "The label of footer link with label=Blog linking to /blog",
+    "message": "Blog"
+  },
+  "link.item.label.CNCF Slack": {
+    "description": "The label of footer link with label=CNCF Slack linking to https://communityinviter.com/apps/cloud-native/cncf",
+    "message": "CNCF Slack"
   },
   "link.item.label.Contribute to this page": {
-    "message": "Contribute to this page",
-    "description": "The label of footer link with label=Contribute to this page linking to https://github.com/cloud-native-austria/cna-website"
+    "description": "The label of footer link with label=Contribute to this page linking to https://github.com/cloud-native-austria/cna-website",
+    "message": "Contribute to this page"
   },
-  "copyright": {
-    "message": "Copyright © 2024 Cloud Native Austria",
-    "description": "The footer copyright"
+  "link.item.label.Impressum": {
+    "description": "The label of footer link with label=Impressum linking to /data-privacy",
+    "message": "Impressum"
+  },
+  "link.title.Community": {
+    "description": "The title of the footer links column with title=Community in the footer",
+    "message": "Community"
+  },
+  "link.title.Docs": {
+    "description": "The title of the footer links column with title=Docs in the footer",
+    "message": "Docs"
+  },
+  "link.title.More": {
+    "description": "The title of the footer links column with title=More in the footer",
+    "message": "More"
   }
 }
