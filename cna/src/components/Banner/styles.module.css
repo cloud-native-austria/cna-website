@@ -42,7 +42,7 @@
     align-items: center;
     position: absolute;
     width: 15%;
-    transform: translateY(0%) translateX(30%);
+    /*transform: translateY(0%) translateX(30%);*/
     background-color: transparent;
 
     @media screen and (max-width: 1690px) {

@@ -1,5 +1,4 @@
 import styles from './styles.module.css';
-import {Meetups} from "@site/meetups.js";
 
 export default function MeetingInfo({frontMatter}) {
     // contentTitle is mdx file title -> eg. '20241125'

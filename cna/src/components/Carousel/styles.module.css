@@ -8,12 +8,13 @@
 }
 
 [data-theme='dark'] {
-  .base {
-    background-color: #094163;
-    img {
-      opacity: 0.7;
+    .base {
+        background-color: #094163;
     }
-  }
+
+    .base > img {
+        opacity: 0.7;
+    }
 }
 
 .slider {
@@ -32,7 +33,7 @@
     border-radius: 1rem;
 
     @media screen and (max-width: 480px) {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 }
 
