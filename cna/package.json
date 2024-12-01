@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "^3.6.1",
+    "@docusaurus/faster": "^3.6.3",
     "@docusaurus/preset-classic": "^3.6.1",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
