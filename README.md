@@ -29,3 +29,8 @@ Installation documentation for docusaurus is can be found [here](https://docusau
 ## How to add a new chapter/meetup
 
 All the information regarding this topic can be found [here](./CONTRIBUTING.md).
+
+## Attributions
+
+- Homepage art, base layout, color scheme created by Victoria Dinius
+- A lot of help with CSS by [wapcaf](https://github.com/wapcaf)

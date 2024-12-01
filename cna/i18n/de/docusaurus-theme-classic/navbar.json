@@ -1,26 +1,26 @@
 {
-  "title": {
-    "message": "Cloud Native Austria",
-    "description": "The title in the navbar"
-  },
-  "logo.alt": {
-    "message": "CNA Logo",
-    "description": "The alt text of navbar logo"
-  },
   "item.label.Association": {
-    "message": "Association",
-    "description": "Navbar item with label Association"
+    "description": "Navbar item with label Association",
+    "message": "Association"
   },
   "item.label.Blog": {
-    "message": "Blog",
-    "description": "Navbar item with label Blog"
-  },
-  "item.label.Sponsoring": {
-    "message": "Sponsoring",
-    "description": "Navbar item with label Sponsoring"
+    "description": "Navbar item with label Blog",
+    "message": "Blog"
   },
   "item.label.CNA GitHub": {
-    "message": "CNA GitHub",
-    "description": "Navbar item with label CNA GitHub"
+    "description": "Navbar item with label CNA GitHub",
+    "message": "CNA GitHub"
+  },
+  "item.label.Sponsoring": {
+    "description": "Navbar item with label Sponsoring",
+    "message": "Sponsoring"
+  },
+  "logo.alt": {
+    "description": "The alt text of navbar logo",
+    "message": "CNA Logo"
+  },
+  "title": {
+    "description": "The title in the navbar",
+    "message": "Cloud Native Austria"
   }
 }
