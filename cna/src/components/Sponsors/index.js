@@ -9,16 +9,6 @@ const CardGrid = () => {
             text: "Exoscale",
             link: "https://www.exoscale.com/",
         },
-        {
-            image: "/img/graz.svg",
-            text: "Partner 2",
-            link: "https://example.com/2",
-        },
-        {
-            image: "/img/vienna.png",
-            text: "Partner 3",
-            link: "https://example.com/3",
-        }
     ];
 
     return (
