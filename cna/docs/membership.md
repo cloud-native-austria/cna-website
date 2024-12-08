@@ -15,7 +15,7 @@ A modest *annual membership fee of €50,-* per person unlocks several exciting 
 Individual Benefits:
 
 - Members are warmly invited to the annual general meeting, a great chance to have a say in the community’s direction.
-- Each Cloud Native Austria member receives a discounted ticket for KCD Austria.
+- Each Cloud Native Austria member receives a discounted ticket for our annual flagship event.
 - Each Cloud Native Austria member in a community is granted €100 annually to support a community event, fostering growth and engagement.
   - This incentive is limited to three members per community.
   - The financial support is taken from a joint budget pot. The amount of the budget pot is decided each year. Increases are possible. Payments are made on a first come, first serve basis.
