@@ -71,7 +71,7 @@ const config = {
 
           locationFolders.forEach(folder => {
             const files = fs.readdirSync("./src/pages/"+folder);
-            const dateFiles = files.filter(file => /^\d{8}\.md$/.test(file)).reverse();
+            const dateFiles = files.filter(file => /^\d{8}\.mdx$/.test(file)).reverse();
 
             const fileContent = fs.readFileSync("./src/pages/"+folder+"/description.mdx", 'utf8');
             const firstLine = fileContent.split('\n')[0];
@@ -182,7 +182,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'light',
+        // style: 'light',
         links: [
           {
             title: 'Docs',

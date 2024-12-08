@@ -20,7 +20,8 @@
   --ifm-footer-background-color: #0b507a;
   --ifm-footer-link-color: #ffffff;
   --ifm-footer-color: #052234;
-  --ifm-background-color: rgba(242, 117, 1, 0.2);
+  --ifm-background-color: #ffffff;
+  --ifm-text-color: #052234;
 
   .clean-btn {
     color: #ffffff;
@@ -33,7 +34,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 
-[data-theme='dark'] {
+html[data-theme='dark'] {
   --ifm-color-primary: #ff9900;
   --ifm-color-primary-dark: #e68a00;
   --ifm-color-primary-darker: #d98200;
@@ -47,5 +48,11 @@
   --ifm-footer-background-color: #052234;
   --ifm-footer-link-color: #ffffff;
   --ifm-footer-color: #ff9900;
-  --ifm-background-color: #052234;
+  --ifm-background-color: #04314e;
+  --ifm-text-color: #ffffff;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: var(--ifm-footer-color)!important;
 }

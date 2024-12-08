@@ -7,7 +7,7 @@
 
 [data-theme='dark'] {
   .bannerImage {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 
@@ -44,6 +44,7 @@
     width: 15%;
     /*transform: translateY(0%) translateX(30%);*/
     background-color: transparent;
+    color: #005091;
 
     @media screen and (max-width: 1690px) {
         font-size: 3em;

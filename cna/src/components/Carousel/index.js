@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import Heading from '@theme/Heading';
 import meetups from '@site/data/mdxFrontMatter.json';
 
 function Slide({logo, headline, date, url}) {
@@ -16,9 +15,9 @@ function Slide({logo, headline, date, url}) {
             <div className={styles.slideText}>
                 <div>
                     <a href={url} target="_blank">
-                        <Heading as="h2">{headline}</Heading>
+                        <h2>{headline}</h2>
                     </a>
-                    {date}
+                    <p>{date}</p>
                 </div>
             </div>
         </div>
