@@ -156,6 +156,10 @@ const config = {
                 to: '/innsbruck',
               },
               {
+                label: 'Vienna',
+                to: '/vienna',
+              },
+              {
                 type: 'html',
                 value: '<hr>', // The HTML to be rendered
               },
@@ -166,10 +170,6 @@ const config = {
               {
                 label: 'Linz',
                 to: '/linz',
-              },
-              {
-                label: 'Vienna',
-                to: '/vienna',
               },
             ],
           },
