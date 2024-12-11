@@ -5,6 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
+
 :root {
   --ifm-color-primary: #0073cf;
   --ifm-color-primary-dark: #0067ba;
@@ -13,11 +14,29 @@
   --ifm-color-primary-light: #007ee4;
   --ifm-color-primary-lighter: #0084ee;
   --ifm-color-primary-lightest: #0e94ff;
-  --ifm-link-hover-decoration: none
+  --ifm-link-hover-decoration: none;
+  --ifm-navbar-background-color: #0b507a;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-footer-background-color: #0b507a;
+  --ifm-footer-link-color: #ffffff;
+  --ifm-footer-title-color: #ff9900;
+  --ifm-footer-color: #ffffff;
+  --ifm-background-color: #ffffff;
+  --ifm-text-color: #052234;
+  --heading-color: #094163;
+
+  .clean-btn {
+    color: #ffffff;
+  }
+
+  @media screen and (max-width: 995px) {
+    --ifm-menu-color: #ffffff;
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+
+html[data-theme='dark'] {
   --ifm-color-primary: #ff9900;
   --ifm-color-primary-dark: #e68a00;
   --ifm-color-primary-darker: #d98200;
@@ -25,5 +44,17 @@
   --ifm-color-primary-light: #ffa31a;
   --ifm-color-primary-lighter: #ffa826;
   --ifm-color-primary-lightest: #ffb84d;
-  --ifm-link-hover-decoration: none
+  --ifm-link-hover-decoration: none;
+  --ifm-navbar-background-color: #052234;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-footer-background-color: #052234;
+  --ifm-footer-link-color: #ffffff;
+  --ifm-background-color: #04314e;
+  --ifm-text-color: #ffffff;
+  --heading-color: #ffffff;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: var(--heading-color)!important;
 }

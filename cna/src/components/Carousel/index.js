@@ -1,54 +1,88 @@
-
 import styles from './styles.module.css';
-import "../../../node_modules/slick-carousel/slick/slick.css";
-import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import Heading from '@theme/Heading';
+import meetups from '@site/data/mdxFrontMatter.json';
 
-function Slide({logo, headline, text, url}) {
-  return (
-    <a className={styles.slide} href={url} target="_blank">
-      <div className={styles.slideIcon}>
-        <img className={styles.slideSVG} src={useBaseUrl(logo)} />
-      </div>
-      <div className={styles.slideText}>
-        <div>
-          <Heading as="h1">{headline}</Heading>
-          {text}
+function Slide({logo, headline, date, location, url}) {
+    return (
+        <div className={styles.slide}>
+            <div className={styles.slideIcon}>
+                <img className={styles.slideSVG} src={useBaseUrl(logo)} alt="logo"/>
+            </div>
+            <div className={styles.slideText}>
+                <div>
+                    <a href={url} target="_blank">
+                        <h2>{headline}</h2>
+                    </a>
+                    <p>{date}</p>
+                    <p>@{location}</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </a>
-  );
+    );
 }
 
 export default function Carousel() {
-  var settings = {
-    dots: true,
-    fade: true,
-    infinite: true,
-    autoplay: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    waitForAnimate: false
-  };
-  return (
-    <div className="container">
-      <Slider {...settings}>
-        <Slide 
-            logo='/img/kcd.webp'
-            headline='KCD Austria 2024'
-            text='On October 8th - 10th the Kubernetes & Cloud Native community will gather in Vienna, Austria. Join us for a three-day technical event loaded with exciting talks, workshops and networking opportunities. KCD Austria is aimed at developers, platform people, and other IT professionals interested in cloud native technologies. This community event is supported by the CNCF.' 
-            url='https://kcdaustria.at'
-        />
-        <Slide 
-            logo='/img/graz.svg'
-            headline='April Meetup Graz'
-            text='Come join us at the april meetup of the CNCF Graz community!'
-            url='graz' />
-      </Slider>
-    </div>
-  );
+    const settings = {
+        dots: true,
+        infinite: true,
+        autoplay: false,
+        speed: 900,
+        // slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 8192,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
+            {
+                breakpoint: 2048,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+        ],
+        centerMode: true,
+        centerPadding: '20px',
+        slidesToScroll: 3,
+        waitForAnimate: false,
+        adaptiveHeight: false,
+    };
+
+    return (
+        <div className={styles.base}>
+            <div className="container">
+                <Slider {...settings}>
+                    {meetups.map((meetup) => (
+                        <Slide
+                            logo={`/img/${meetup.chapter}.png`}
+                            headline={meetup.frontMatter.title}
+                            date={meetup.frontMatter.date}
+                            location={meetup.frontMatter.location}
+                            url={`${meetup.chapter}/${meetup.frontMatter.id}`}/>
+                    ))}
+                </Slider>
+            </div>
+        </div>
+    );
 }
