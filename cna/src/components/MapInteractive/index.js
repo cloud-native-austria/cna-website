@@ -26,7 +26,7 @@ const markers = [
         icon: "/img/vienna.png"
     }, {
         markerOffset: -18,
-        name: "Linz",
+        name: "*Linz",
         coordinates: [14.2833, 48.3000],
         link: "linz",
         icon: "/img/cncg.svg"
@@ -38,12 +38,12 @@ export default function MapChart() {
     return (
         <ComposableMap
             width={700}
-            height={350} // Set the desired height
+            height={250} // Set the desired height
             projection="geoAzimuthalEqualArea"
             // https://d3js.org/d3-geo/projection#projection_center
             projectionConfig={{
                 center: [13.7525, 47.5783],
-                scale: 7000
+                scale: 4000
             }}
         >
             <Geographies geography={geoUrl}>

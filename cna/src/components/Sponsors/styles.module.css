@@ -1,8 +1,11 @@
-h1 {
+
+.sponsorHeading {
   text-align: center;
-  font-size: 5rem;
+  font-size: 2rem;
   margin-top: 3%;
+  color: var(--heading-color);
 }
+
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 250px)); /* Cells are at least 10% wide */
@@ -34,14 +37,12 @@ h1 {
 }
 
 .gridItem > a {
-  margin: 10px 0 0; /* Add space between image and text */
+  margin: 10px 5px 10px 5px; /* Add space between image and text */
   font-size: 2rem;
 }
 
 .gridItem:hover {
-  background-color: #F27501; /* Change background color on hover */
-}
-
-.gridItem > a:hover {
+  box-shadow: 0 5px 10px var(--slide-heading-color);
+  transform: translateY(-2px);
   color: #02233E;
 }

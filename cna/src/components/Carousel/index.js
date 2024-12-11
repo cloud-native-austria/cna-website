@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import meetups from '@site/data/mdxFrontMatter.json';
 
-function Slide({logo, headline, date, url}) {
+function Slide({logo, headline, date, location, url}) {
     return (
         <div className={styles.slide}>
             <div className={styles.slideIcon}>
@@ -18,6 +18,7 @@ function Slide({logo, headline, date, url}) {
                         <h2>{headline}</h2>
                     </a>
                     <p>{date}</p>
+                    <p>@{location}</p>
                 </div>
             </div>
         </div>
@@ -28,17 +29,29 @@ export default function Carousel() {
     const settings = {
         dots: true,
         infinite: true,
-        autoplay: true,
-        speed: 500,
-        slidesToShow: 3,
+        autoplay: false,
+        speed: 900,
+        // slidesToShow: 3,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 8192,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
+            {
+                breakpoint: 2048,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 }
             },
             {
@@ -50,8 +63,8 @@ export default function Carousel() {
             },
         ],
         centerMode: true,
-        centerPadding: '60px',
-        slidesToScroll: 1,
+        centerPadding: '20px',
+        slidesToScroll: 3,
         waitForAnimate: false,
         adaptiveHeight: false,
     };
@@ -65,6 +78,7 @@ export default function Carousel() {
                             logo={`/img/${meetup.chapter}.png`}
                             headline={meetup.frontMatter.title}
                             date={meetup.frontMatter.date}
+                            location={meetup.frontMatter.location}
                             url={`${meetup.chapter}/${meetup.frontMatter.id}`}/>
                     ))}
                 </Slider>

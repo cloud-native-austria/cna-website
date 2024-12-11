@@ -13,7 +13,7 @@ const CardGrid = () => {
 
     return (
         <div>
-            <h1>Thanks to our sponsors ❤️</h1>
+            <h1 className={styles.sponsorHeading}>Thanks to our sponsors ❤️</h1>
             <div className={styles.gridContainer}>
                 {cardData.map((card, index) => (
                     <div className={styles.gridItem} key={index}>
