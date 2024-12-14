@@ -1,0 +1,54 @@
+[
+  {
+    "chapter": "graz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/graz/20241219.mdx",
+    "frontMatter": {
+      "community": "graz",
+      "date": "2024-12-19",
+      "id": "20241219,",
+      "location": "Adventmarkt",
+      "locationAddress": "Mariahilferplatz, 8020 Graz",
+      "locationGmapsUrl": "https://maps.app.goo.gl/pfHivZWt6yAm8zyN8",
+      "locationOpenStreetUrl": "https://www.openstreetmap.org/relation/11511612",
+      "timeEnd": "10pm",
+      "timeStart": "6pm",
+      "title": "xmas Meetup Graz",
+      "urlBevy": "https://community.cncf.io/events/details/cncf-cloud-native-graz-presents-cncg-graz-december-meetup/",
+      "urlMeetup": "https://www.meetup.com/cncf-graz/events/304739580"
+    }
+  },
+  {
+    "chapter": "graz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/graz/20250123.mdx",
+    "frontMatter": {
+      "date": "2025-01-23",
+      "id": "20250123,",
+      "location": "SPACELEND",
+      "locationAddress": "Neubaugasse 24, 8020 Graz",
+      "locationGmapsUrl": "https://maps.app.goo.gl/SPysNWReHUbrEQBT6",
+      "locationOpenStreetUrl": "https://www.openstreetmap.org/node/8752516740",
+      "timeEnd": "10pm",
+      "timeStart": "5pm",
+      "title": "Meetup Graz January",
+      "urlBevy": "",
+      "urlMeetup": ""
+    }
+  },
+  {
+    "chapter": "linz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/linz/20250115.mdx",
+    "frontMatter": {
+      "date": "2025-01-15",
+      "id": "20250115,",
+      "location": "Public Cloud Group",
+      "locationAddress": "Tabakfabrik Linz, 10 Peter-Behrens-Platz, House CASABLANCA, 3. OG, Room: Startrampe, Linz, 4020",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "10pm",
+      "timeStart": "6pm",
+      "title": "Meetup Linz January",
+      "urlBevy": "https://community.cncf.io/events/details/cncf-linz-presents-save-the-date-january-15th/",
+      "urlMeetup": "https://www.meetup.com/cloud-native-linz/events/304003701"
+    }
+  }
+]

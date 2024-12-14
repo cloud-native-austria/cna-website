@@ -1,0 +1,34 @@
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3%;
+  color: var(--heading-color);
+}
+
+.centeredParagraph {
+  margin: 0 auto; /* Centers the paragraph horizontally */
+  max-width: 60%; /* Restricts the paragraph's width to 80% of the viewport */
+  text-align: justify; /* Centers the text inside the paragraph */
+  font-size: 16px; /* Optional: Adjust font size */
+  line-height: 1.5; /* Optional: Improve readability */
+  padding: 10px; /* Optional: Add padding around the text */
+  color: var(--ifm-text-color); /* Optional: Text color */
+}
+
+@media screen and (max-width: 995px) {
+  .centeredParagraph {
+    margin: 0 auto; /* Centers the paragraph horizontally */
+    max-width: 80%; /* Restricts the paragraph's width to 80% of the viewport */
+    text-align: justify; /* Centers the text inside the paragraph */
+    font-size: 16px; /* Optional: Adjust font size */
+    line-height: 1.5; /* Optional: Improve readability */
+    padding: 10px; /* Optional: Add padding around the text */
+    color: var(--ifm-text-color); /* Optional: Text color */
+  }
+}
+
+.container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--ifm-background-color);
+}

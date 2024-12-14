@@ -1,0 +1,26 @@
+---
+id: 20241125,
+title: Meetup Test 2024 12 19
+community: Graz
+date: "2024-11-19"
+timeStart: "5pm"
+timeEnd: "12pm"
+location: "SPACELEND"
+locationAddress: "yoMama"
+locationGmapsUrl: "https://adsf.com"
+locationOpenStreetUrl: "https://adsf.com"
+urlMeetup: https://www.meetup.com/cncf-graz/events/304074335
+urlBevy: https://community.cncf.io/events/details/cncf-cloud-native-graz-presents-cncg-graz-meetup-november-2024/
+---
+
+import MeetingInfo from "@site/src/components/MeetingInfo";
+
+<MeetingInfo frontMatter={frontMatter} />
+
+The front matter of this page:
+
+<ul>
+    {Object.entries(frontMatter).map(([key, value]) => <li key={key}><b>{key}</b>: {value}</li>)}
+</ul>
+
+<p>The title of this page is: <b>{contentTitle}</b></p>

@@ -27,6 +27,10 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
 
+  future: {
+    experimental_faster: true,
+  },
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -67,9 +71,9 @@ const config = {
 
           locationFolders.forEach(folder => {
             const files = fs.readdirSync("./src/pages/"+folder);
-            const dateFiles = files.filter(file => /^\d{8}\.md$/.test(file)).reverse();
+            const dateFiles = files.filter(file => /^\d{8}\.mdx$/.test(file)).reverse();
 
-            const fileContent = fs.readFileSync("./src/pages/"+folder+"/description.md", 'utf8');
+            const fileContent = fs.readFileSync("./src/pages/"+folder+"/description.mdx", 'utf8');
             const firstLine = fileContent.split('\n')[0];
             const locationName = firstLine.slice(2);
 
@@ -121,10 +125,6 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Cloud Native Austria',
-        logo: {
-          alt: 'CNA Logo',
-          src: 'img/logo.svg',
-        },
         items: [
           /* {
             type: 'localeDropdown',
@@ -140,12 +140,36 @@ const config = {
           {to: '/docs/sponsoring', label: 'Sponsoring', position: 'left'},
           {
             type: 'dropdown',
-            label: 'Chapter',
+            label: 'Communities',
             position: 'left',
             items: [
               {
+                type: 'html',
+                value: '<span>Sponsored</span>', // The HTML to be rendered
+              },
+              {
                 label: 'Graz',
                 to: '/graz',
+              },
+              {
+                label: 'Innsbruck',
+                to: '/innsbruck',
+              },
+              {
+                label: 'Vienna',
+                to: '/vienna',
+              },
+              {
+                type: 'html',
+                value: '<hr>', // The HTML to be rendered
+              },
+              {
+                type: 'html',
+                value: '<span>Endorsed</span>', // The HTML to be rendered
+              },
+              {
+                label: 'Linz',
+                to: '/linz',
               },
             ],
           },
@@ -158,7 +182,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'light',
+        // style: 'light',
         links: [
           {
             title: 'Docs',
@@ -185,10 +209,10 @@ const config = {
                 label: 'Impressum',
                 to: '/data-privacy',
               },
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'Contribute to this page',
                 href: 'https://github.com/cloud-native-austria/cna-website'
