@@ -44,6 +44,7 @@
     "clear": "docusaurus clear",
     "deploy": "docusaurus deploy",
     "docusaurus": "docusaurus",
+    "prepare": "node scripts/preprocessMdx.js",
     "serve": "docusaurus serve",
     "start": "docusaurus start",
     "swizzle": "docusaurus swizzle",
