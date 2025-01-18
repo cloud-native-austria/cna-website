@@ -16,6 +16,15 @@ const CardGrid = () => {
                 Kubernetes, Docker, microservices, serverless computing, and modern CI/CD pipelines to build scalable,
                 resilient, and efficient applications.
             </p>
+
+            <p className={styles.cfp}>
+                Have know-how to share or an idea to present? We have the event!
+                <a href="https://sessionize.com/cloud-native-austria-meetups" className={styles.cfpButton}
+                   target="_blank">
+                    submit your session here
+                </a>
+            </p>
+
             <p className={styles.centeredParagraph}>
                 The community serves as a platform for sharing expertise through meetups, workshops, webinars, and
                 conferences, often featuring industry leaders and experts.

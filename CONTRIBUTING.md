@@ -27,11 +27,13 @@ Adding a new chapter consists of 2 parts
 
     Adding new meetup dates and information for those events is discussed in the next section.
 
-    If you did everything right your chapter should be shown on the homepage alongside the others and, if you added  meetup(s) already, the next upcoming meetup if there is one.
+    If you did everything right your chapter should be shown on the homepage alongside the others and, if you added
+    meetup(s) already, the next upcoming meetup if there is one.
 
 ### Meetup
 
-If you have your chapter already created, adding a new meetup is as simple as adding a new mdx file to your chapter folder withing /src/pages/YOUR-CHAPTER following this naming convention:
+If you have your chapter already created, adding a new meetup is as simple as adding a new mdx file to your chapter
+folder withing /src/pages/YOUR-CHAPTER following this naming convention:
 
 > YYYYMMDD.mdx
 
@@ -45,8 +47,10 @@ So the file from the explanations above would be named like this.
 
 > 20240204.mdx
 
-If you follow this convention the date is read and shown in your description of your location as one of the meetup dates.
-Moreover if it is the next meetup happenig it will be automatically shown on the start page as the next meetup of your chapter.
+If you follow this convention the date is read and shown in your description of your location
+as one of the meetup dates.
+Moreover, if it is the next meetup happening it will be automatically shown on the start page
+as the next meetup of your chapter.
 Make sure to provide all the necessary information as a front matter block in the mdx file.
 This will look something like..
 

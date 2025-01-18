@@ -24,7 +24,7 @@
           ];
 
           shellHook = ''
-            npm ci
+            cd cna && npm ci
             export PATH=$PATH:$PWD/bin
           '';
           TEST="Hello Cloud Native Austria Contributor! :D";

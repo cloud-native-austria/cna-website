@@ -29,8 +29,8 @@ export default function Carousel() {
     const settings = {
         dots: true,
         infinite: true,
-        autoplay: false,
-        speed: 900,
+        autoplay: true,
+        speed: 1000,
         // slidesToShow: 3,
         responsive: [
             {
@@ -64,7 +64,7 @@ export default function Carousel() {
         ],
         centerMode: true,
         centerPadding: '20px',
-        slidesToScroll: 3,
+        // slidesToScroll: 3,
         waitForAnimate: false,
         adaptiveHeight: false,
     };
