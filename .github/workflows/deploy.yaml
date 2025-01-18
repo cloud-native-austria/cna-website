@@ -31,7 +31,7 @@ jobs:
       - name: prepare meetup metadata
         run: npm run prepare
       - name: Build website
-        run: npm build
+        run: npm run build
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
