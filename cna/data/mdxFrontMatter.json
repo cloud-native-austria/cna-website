@@ -1,57 +1,6 @@
 [
   {
     "chapter": "graz",
-    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/graz/20250123.mdx",
-    "frontMatter": {
-      "date": "2025-01-23",
-      "id": 20250123,
-      "location": "SPACELEND",
-      "locationAddress": "Neubaugasse 24, 8020 Graz",
-      "locationGmapsUrl": "https://maps.app.goo.gl/SPysNWReHUbrEQBT6",
-      "locationOpenStreetUrl": "https://www.openstreetmap.org/node/8752516740",
-      "timeEnd": "10pm",
-      "timeStart": "5pm",
-      "title": "Meetup Graz January",
-      "urlBevy": "https://community.cncf.io/events/details/cncf-cloud-native-graz-presents-cncg-graz-meetup-january-2025/",
-      "urlMeetup": "https://www.meetup.com/cncf-graz/events/305625296/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
-    }
-  },
-  {
-    "chapter": "graz",
-    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/graz/20250220.mdx",
-    "frontMatter": {
-      "date": "2025-02-20",
-      "id": 20250220,
-      "location": "SPACELEND",
-      "locationAddress": "Neubaugasse 24, 8020 Graz",
-      "locationGmapsUrl": "https://maps.app.goo.gl/SPysNWReHUbrEQBT6",
-      "locationOpenStreetUrl": "https://www.openstreetmap.org/node/8752516740",
-      "timeEnd": "10pm",
-      "timeStart": "5pm",
-      "title": "Meetup Graz February",
-      "urlBevy": "",
-      "urlMeetup": ""
-    }
-  },
-  {
-    "chapter": "graz",
-    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/graz/20250320.mdx",
-    "frontMatter": {
-      "date": "2025-03-20",
-      "id": 20250320,
-      "location": "SPACELEND",
-      "locationAddress": "Neubaugasse 24, 8020 Graz",
-      "locationGmapsUrl": "https://maps.app.goo.gl/SPysNWReHUbrEQBT6",
-      "locationOpenStreetUrl": "https://www.openstreetmap.org/node/8752516740",
-      "timeEnd": "10pm",
-      "timeStart": "5pm",
-      "title": "Meetup Graz March",
-      "urlBevy": "",
-      "urlMeetup": ""
-    }
-  },
-  {
-    "chapter": "graz",
     "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/graz/20250417.mdx",
     "frontMatter": {
       "date": "2025-04-17",
@@ -63,8 +12,8 @@
       "timeEnd": "10pm",
       "timeStart": "5pm",
       "title": "Meetup Graz April",
-      "urlBevy": "",
-      "urlMeetup": ""
+      "urlBevy": "https://community.cncf.io/events/details/cncf-cloud-native-graz-presents-cncg-graz-meetup-april-2025/",
+      "urlMeetup": "https://www.meetup.com/cncf-graz/events/306151086/"
     }
   },
   {
@@ -82,23 +31,6 @@
       "title": "Meetup Graz May",
       "urlBevy": "",
       "urlMeetup": ""
-    }
-  },
-  {
-    "chapter": "vienna",
-    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/vienna/20250127.mdx",
-    "frontMatter": {
-      "date": "2025-01-27",
-      "id": 20250127,
-      "location": "Exoscale",
-      "locationAddress": "Lassallestraße 9, 1020 Wien",
-      "locationGmapsUrl": "https://maps.app.goo.gl/BWJfDPfuNkZBLiBx8",
-      "locationOpenStreetUrl": "https://www.openstreetmap.org/node/2725208622",
-      "timeEnd": "09pm",
-      "timeStart": "5pm",
-      "title": "Vienna DevOps and Security Meetup - New Year Edition",
-      "urlBevy": "",
-      "urlMeetup": "https://www.meetup.com/vienna-devops-security/events/305495641"
     }
   }
 ]
