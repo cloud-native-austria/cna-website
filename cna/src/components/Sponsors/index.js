@@ -8,6 +8,14 @@ const CardGrid = () => {
             image: "/img/exoscale.png",
             text: "Exoscale",
             link: "https://www.exoscale.com/",
+        }, {
+            image: "/img/Dynatrace.png",
+            text: "Dynatrace",
+            link: "https://www.dynatrace.com/",
+        }, {
+            image: "/img/Whizus.png",
+            text: "WhizUs",
+            link: "https://www.whizus.com/",
         },
     ];
 
@@ -17,9 +25,8 @@ const CardGrid = () => {
             <div className={styles.gridContainer}>
                 {cardData.map((card, index) => (
                     <div className={styles.gridItem} key={index}>
-                        <img src={card.image} alt={card.text}/>
                         <a href={card.link} target="_blank" rel="noopener noreferrer">
-                            {card.text}
+                            <img src={card.image} alt={card.text}/>
                         </a>
                     </div>
                 ))}
