@@ -28,6 +28,9 @@ const config = {
   onBrokenMarkdownLinks: 'throw',
 
   future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+    },
     experimental_faster: true,
   },
 
@@ -207,7 +210,7 @@ const config = {
             items: [
               {
                 label: 'Impressum',
-                to: '/data-privacy',
+                to: '/imprint',
               },
               // {
               //   label: 'Blog',
