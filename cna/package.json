@@ -15,16 +15,16 @@
     "@docusaurus/core": "^3.6.1",
     "@docusaurus/faster": "^3.6.3",
     "@docusaurus/preset-classic": "^3.6.1",
-    "@fortawesome/fontawesome-svg-core": "^6.6.0",
-    "@fortawesome/free-brands-svg-icons": "^6.6.0",
-    "@fortawesome/free-regular-svg-icons": "^6.6.0",
-    "@fortawesome/free-solid-svg-icons": "^6.6.0",
-    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@fortawesome/free-brands-svg-icons": "^7.0.0",
+    "@fortawesome/free-regular-svg-icons": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@fortawesome/react-fontawesome": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-router-dom": "^6.22.1",
     "react-simple-maps": "^3.0.0",
     "react-slick": "^0.31.0",
@@ -38,6 +38,12 @@
     "node": ">=18.0"
   },
   "name": "cna",
+  "overrides": {
+    "react-simple-maps": {
+      "react": "^16.8.0 || 17.x || 18.x || 19.x",
+      "react-dom": "^16.8.0 || 17.x || 18.x || 19.x"
+    }
+  },
   "private": true,
   "scripts": {
     "build": "docusaurus build",
@@ -51,5 +57,5 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "write-translations": "docusaurus write-translations"
   },
-  "version": "0.0.0"
+  "version": "1.0.0"
 }

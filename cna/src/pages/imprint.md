@@ -1,6 +1,6 @@
 ---
 title: Impressum & Data Privacy
-slug: imprint-and-data-privacy
+slug: imprint
 ---
 
 # Impressum
