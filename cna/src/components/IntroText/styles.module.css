@@ -15,18 +15,6 @@ h1 {
     color: var(--ifm-text-color); /* Optional: Text color */
 }
 
-@media screen and (max-width: 995px) {
-    .centeredParagraph {
-        margin: 0 auto; /* Centers the paragraph horizontally */
-        max-width: 80%; /* Restricts the paragraph's width to 80% of the viewport */
-        text-align: justify; /* Centers the text inside the paragraph */
-        font-size: 16px; /* Optional: Adjust font size */
-        line-height: 1.5; /* Optional: Improve readability */
-        padding: 10px; /* Optional: Add padding around the text */
-        color: var(--ifm-text-color); /* Optional: Text color */
-    }
-}
-
 .container {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -34,7 +22,7 @@ h1 {
 }
 
 .cfp {
-    margin: 0 auto; /* Centers the paragraph horizontally */
+    margin: 24px auto; /* Centers the paragraph horizontally */
     max-width: 40%; /* Restricts the paragraph's width to 80% of the viewport */
     text-align: justify; /* Centers the text inside the paragraph */
     font-size: 16px; /* Optional: Adjust font size */
@@ -56,7 +44,7 @@ h1 {
     background-color: #A8E6CF; /* Light green background */
     color: #333; /* Dark text for contrast */
     padding: 10px 20px; /* Spacing inside the button */
-    max-width: 40%; /* Restricts the paragraph's width to 80% of the viewport */
+    display: block;
     border-radius: 5px; /* Rounded corners */
     text-decoration: none; /* Remove underline on links */
     transition: background-color 0.3s ease; /* Smooth hover transition */
@@ -64,4 +52,26 @@ h1 {
 
 .cfpButton:hover {
     background-color: #8DCFA7; /* Slightly darker green on hover */
+}
+
+@media screen and (max-width: 995px) {
+    .centeredParagraph {
+        margin: 0 auto; /* Centers the paragraph horizontally */
+        max-width: 90%; /* Restricts the paragraph's width to 80% of the viewport */
+        text-align: justify; /* Centers the text inside the paragraph */
+        font-size: 16px; /* Optional: Adjust font size */
+        line-height: 1.5; /* Optional: Improve readability */
+        padding: 10px; /* Optional: Add padding around the text */
+        color: var(--ifm-text-color); /* Optional: Text color */
+    }
+
+    .cfp {
+        max-width: 80%;
+    }
+
+    .cfpButton {
+        max-width: 80%;
+        text-align: center;
+        margin-top: 12px;
+    }
 }
