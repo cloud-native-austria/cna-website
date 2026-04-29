@@ -1,6 +1,9 @@
 # Apple
 .DS_Store
 
+# AI
+.claude/settings.local.json
+
 # Logs
 logs
 *.log
@@ -142,3 +145,4 @@ dist
 .devenv/
 .devenv.flake.nix
 devenv.local.nix
+.pre-commit-config.yaml
