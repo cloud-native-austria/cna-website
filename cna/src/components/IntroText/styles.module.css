@@ -51,7 +51,11 @@ h1 {
 }
 
 .cfpButton:hover {
-    background-color: #8DCFA7; /* Slightly darker green on hover */
+    background-color: #8DCFA7;
+    color: #1a3d2e;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 @media screen and (max-width: 995px) {
