@@ -1,111 +1,129 @@
 ---
 name: sync-meetups
-description: Sync upcoming chapter meetups for the cna-website repo. Fetches events from meetup.com group pages and community.cncf.io (Bevy) chapter pages, diffs against existing MDX files under cna/src/pages/<chapter>/, creates missing meetup MDX files, and prints a tabular cross-platform overview. Use when the user says "sync meetups", "/sync-meetups", "check for new meetups", "update meetup events", or asks to refresh chapter event listings in the cna-website repo.
+description: Sync upcoming chapter meetups for the cna-website repo. Runs cna/scripts/fetchMeetups.js against meetup.com to download per-chapter event data, diffs against existing MDX files under cna/src/pages/<chapter>/, and creates missing meetup MDX files. Use when the user says "sync meetups", "/sync-meetups", "check for new meetups", "update meetup events", or asks to refresh chapter event listings in the cna-website repo.
 ---
 
 # sync-meetups
 
-Reconcile chapter meetup events across three platforms: meetup.com, community.cncf.io (Bevy), and the local repo (`cna-website`). Fill the gaps in the repo. Report the state.
+Reconcile chapter meetup events between meetup.com and the local repo (`cna-website`). Fill the gaps in the repo. Report the state.
 
-## Inputs (ask the user if not provided)
+Data source is **only** `cna/scripts/fetchMeetups.js`. Do not WebFetch meetup pages directly. Do not query `community.cncf.io`.
 
-For each chapter the user wants synced, you need:
+## Inputs
 
-- Chapter slug — must match an existing folder under `cna/src/pages/<chapter>/` (e.g. `graz`, `vienna`, `linz`, `innsbruck`).
-- meetup.com URL — group events page, e.g. `https://www.meetup.com/cncf-graz/events/`.
-- community.cncf.io URL — chapter Bevy page, e.g. `https://community.cncf.io/cloud-native-graz/`.
+- Config JSON listing `{ meetupGroup, chapter }` pairs (see schema below).
+- Output JSON path the script will write to.
 
-Either platform URL may be empty (`""`/`null`) — chapter exists on only one. Skip that platform for that chapter.
+Default paths used by this skill (override if user specifies otherwise):
 
-Use the table below for information you need to lookup chapter events.
+- Config: `cna/scripts/meetups.config.json`
+- Output: `cna/data/meetups.json`
 
-| Chapter   | meetup.com                                                   | community.cncf.io                                 | repo                    |
-|-----------|--------------------------------------------------------------|---------------------------------------------------|-------------------------|
-| graz      | https://www.meetup.com/cncf-graz/events/                     | https://community.cncf.io/cloud-native-graz/      | cna/src/pages/graz      |
-| innsbruck |                                                              | https://community.cncf.io/cloud-native-innsbruck/ | cna/src/pages/innsbruck |
-| linz      | https://www.meetup.com/cloud-native-linz/events/             | https://community.cncf.io/cloud-native-linz/      | cna/src/pages/linz      |
-| vienna    | https://www.meetup.com/cloud-native-computing-vienna/events/ | https://community.cncf.io/cloud-native-vienna/    | cna/src/pages/vienna    |
-| carinthia |                                                              | https://community.cncf.io/cloud-native-carinthia/ | cna/src/pages/carinthia |
-| austria   | https://www.meetup.com/cloud-native-austria/events/          | https://community.cncf.io/cloud-native-austria/   | cna/src/pages/austria   |
+Config schema:
+
+```json
+{
+  "groups": [
+    { "meetupGroup": "cncf-graz",                     "chapter": "graz"   },
+    { "meetupGroup": "cloud-native-linz",             "chapter": "linz"   },
+    { "meetupGroup": "cloud-native-computing-vienna", "chapter": "vienna" },
+    { "meetupGroup": "cloud-native-austria",          "chapter": "austria"}
+  ]
+}
+```
+
+Every `chapter` value must match an existing folder under `cna/src/pages/<chapter>/`. If it does not, stop and ask — this skill does not bootstrap new chapters (see `CONTRIBUTING.md`).
 
 ## Workflow
 
 ### 1. Locate the repo
 
-Confirm CWD is the `cna-website` repo (look for `cna/docusaurus.config.js`).
-If not, ask the user where the repo is.
-All file paths below are repo-relative.
+Confirm CWD is the `cna-website` repo (look for `cna/docusaurus.config.js`). If not, ask the user where the repo is. All paths below are repo-relative.
 
-### 2. Read existing events
+### 2. Ensure config exists
 
-For each chapter slug, list `cna/src/pages/<chapter>/*.mdx` and parse filenames matching `^\d{8}\.mdx$`.
-The 8-digit prefix is the date in `YYYYMMDD`.
-Read each file's front matter for `title`, `urlMeetup`, `urlBevy` — used later to enrich the report and to detect events that already exist but are missing one of the URLs.
+If the config file does not exist at the default path (or the user's chosen path), ask the user which meetup.com groups map to which chapter folders, then write the config JSON to the chosen path.
 
-Keep a per-chapter set of `repoDates`.
+### 3. Read existing events
 
-### 3. Fetch from meetup.com (use the iCal feed, NOT the HTML page)
+For each chapter slug in the config, list `cna/src/pages/<chapter>/*.mdx` and parse filenames matching `^\d{8}\.mdx$`. The 8-digit prefix is the date in `YYYYMMDD`. Keep a per-chapter set of `repoDates` and read each existing file's front-matter `urlMeetup` to detect already-tracked event URLs.
 
-The meetup.com group page (`/events/`) is a client-rendered SPA.
-WebFetch sees only the SSR shell and reports `Upcoming: 0` even when events exist. Do not use it.
+### 4. Run the fetcher
 
-Use the iCal feed instead: append `ical/` to the meetup URL → `https://www.meetup.com/<group>/events/ical/`.
-It returns a static `.ics` file with structured event data for every upcoming event.
+From the `cna/` directory:
 
-Fetch with WebFetch using this prompt:
+```bash
+node scripts/fetchMeetups.js --config scripts/meetups.config.json --output data/meetups.json
+```
 
-> Return the raw iCal content. For every VEVENT block extract: SUMMARY, DTSTART (with TZID), DTEND (with TZID), LOCATION, DESCRIPTION, URL. Return as a JSON array.
+Optional flags:
+- `--timezone <IANA tz>` — default `Europe/Vienna`. All `date` / `timeStart` / `timeEnd` fields in the output are formatted in this zone.
 
-Conversion rules per VEVENT:
-- `DTSTART` is `YYYYMMDDTHHMMSS` plus `TZID=<zone>` (typically `Europe/Vienna`). Date → `YYYY-MM-DD`. Time → repo style (lowercase `am`/`pm`, no leading zero; e.g. `17:00` → `5pm`, `18:30` → `6:30pm`).
-- `DTEND` → `timeEnd`, same conversion.
-- `SUMMARY` → `title`. Keep verbatim (meetup.com often uses ` - ` instead of `,`).
-- `LOCATION` → split on first `,` into `location` (venue name) and `locationAddress` (rest). If empty, leave both empty.
-- `DESCRIPTION` → Topics body. Strip the leading `Cloud Native Community Group <Chapter>\n` prefix meetup.com prepends. If body is `tba`/empty/whitespace, write `TBD`.
-- `URL` → `urlMeetup`.
+The script:
+- fetches `https://www.meetup.com/<meetupGroup>/events/rss` per group,
+- extracts each event link from RSS,
+- downloads `<eventLink>/ical` for each event,
+- writes a JSON file with structured per-event fields.
 
-If the iCal feed contains zero `VEVENT` blocks the chapter genuinely has no upcoming events — record `—`.
-Do not fall back to the HTML page.
+### 5. Read the script output
 
-If the iCal endpoint 404s (private/deleted group), report the failure for that chapter and continue.
+The output JSON has shape:
 
-### 4. Fetch from community.cncf.io (Bevy)
+```json
+{
+  "fetchedAt": "ISO timestamp",
+  "timezone": "Europe/Vienna",
+  "groups": [
+    {
+      "meetupGroup": "...",
+      "chapter": "...",
+      "rssUrl": "...",
+      "events": [
+        {
+          "url": "https://www.meetup.com/<group>/events/<id>/",
+          "icalUrl": "...",
+          "uid": "...",
+          "title": "...",
+          "date": "YYYY-MM-DD",
+          "dateEnd": "YYYY-MM-DD (empty if same day)",
+          "timeStart": "H:MM am/pm",
+          "timeEnd": "H:MM am/pm",
+          "timezone": "Europe/Vienna",
+          "location": "raw LOCATION (often 'Venue, Address')",
+          "description": "DESCRIPTION (unescaped)",
+          "ical": "raw VCALENDAR text",
+          "parsed": [ { /* full VEVENT */ } ]
+        }
+      ]
+    }
+  ]
+}
+```
 
-Use WebFetch on the Bevy URL with this prompt template:
+If a group entry has `error` instead of `events`, the RSS fetch failed — surface it in the report and continue.
 
-> Extract every UPCOMING event from this CNCF community Bevy page. For each return: title, date in YYYY-MM-DD, start time, end time (if given), venue name, venue address, event URL and agenda/content/topics. Return as a JSON array. Skip past events.
+### 6. Diff
 
-### 5. Diff
+Per chapter, key events by `date` (`YYYY-MM-DD`). An event is **missing in repo** when `cna/src/pages/<chapter>/<YYYYMMDD>.mdx` does not exist (derive `YYYYMMDD` by stripping dashes from `date`).
 
-For each chapter, build a unified set of events keyed by `YYYY-MM-DD` (with title fallback if two events share a date — rare).
-For each event:
+Skip events where `date` is empty or in the past (`date < today`).
 
-- `meetup`: present on meetup.com? store URL.
-- `bevy`: present on community.cncf.io? store URL.
-- `repo`: filename `YYYYMMDD.mdx` exists?
+### 7. Create missing files
 
-An event is **missing in repo** when at least one of `meetup`/`bevy` has it and `repo` does not.
-
-An event is **partial in repo** when the file exists but front matter `urlMeetup` or `urlBevy` is empty while the platform has it.
-Offer to enrich (do not silently rewrite — ask first per chapter).
-
-### 6. Create missing files
-
-For each missing event, write `cna/src/pages/<chapter>/YYYYMMDD.mdx` using this exact template (replace/evaluate `[...]` placeholders, keep empty strings where data is unknown — the user can fill later):
+For each missing event, write `cna/src/pages/<chapter>/<YYYYMMDD>.mdx` using this exact template. Map script fields → front matter directly; do not invent values.
 
 ```mdx
 ---
 id: <YYYYMMDD>
-title: <event title>
-date: "<YYYY-MM-DD>"
-timeStart: "<e.g. 6pm>"
-timeEnd: "<e.g. 10pm or empty string>"
-location: "[add the venue name here]"
-locationAddress: "[add the full venue address here]"
+title: <event.title>
+date: "<event.date>"
+timeStart: "<event.timeStart>"
+timeEnd: "<event.timeEnd>"
+location: "<venue name — first segment of event.location, before the first comma; empty if none>"
+locationAddress: "<rest of event.location after the first comma, trimmed; empty if none>"
 locationGmapsUrl: ""
 locationOpenStreetUrl: ""
-urlMeetup: "[meetup.com event URL or empty]"
-urlBevy: "[community.cncf.io event URL or empty]"
+urlMeetup: "<event.url>"
 ---
 
 import MeetingInfo from "@site/src/components/MeetingInfo";
@@ -114,52 +132,51 @@ import MeetingInfo from "@site/src/components/MeetingInfo";
 
 ## Topics
 
-[add all agenda, description, topics etc you find on the event pages here]
+<event.description trimmed; if empty or whitespace, write "TBD">
 ```
 
 Rules:
 
-- `id` value: same 8-digit date with no quotes (matches existing convention).
+- `id` value: 8-digit date with no quotes (matches existing convention).
 - `date`: ISO `YYYY-MM-DD`, quoted.
-- Time format: lowercase `am`/`pm`, no leading zero (e.g. `6pm`, `5:30pm`). Match existing repo style.
+- `timeStart` / `timeEnd`: copy verbatim from the script (`H:MM am/pm`, e.g. `5:00 pm`, `6:30 pm`).
+- `location` / `locationAddress`: split `event.location` on the first `,`. If `event.location` is empty, leave both empty.
 - Never fabricate Google Maps or OpenStreetMap URLs — leave them empty for the user to fill.
-- If both platforms have the event but with slightly different titles, prefer the meetup.com title (more likely to be the canonical one); note the divergence in the final report.
+- Do not include `urlBevy` — that field is retired from the new workflow.
 
-### 7. Refresh derived data
+### 8. Refresh derived data
 
-After creating files, run from the `cna/` directory:
+From `cna/`:
 
 ```bash
 npm run prepare
 ```
 
-This regenerates `cna/data/mdxFrontMatter.json`.
-If it errors (e.g. invalid date), surface the error and point to the offending file.
+This regenerates `cna/data/mdxFrontMatter.json`. If it errors, surface the error and point to the offending file.
 
-### 8. Report
+### 9. Report
 
-End the response with one markdown table covering every event found across all chapters and platforms. Columns:
+End the response with one markdown table covering every upcoming event found across chapters:
 
-| Chapter | Date | Title | meetup.com | community.cncf.io | repo |
-|---------|------|-------|------------|-------------------|------|
+| Chapter | Date | Title | meetup.com | repo |
+|---------|------|-------|------------|------|
 
 Cell values:
+- meetup.com: `✓` (link the URL).
+- repo: `✓ existing`, `+ created` (this run), `—`.
 
-- meetup.com / community.cncf.io: `✓` (URL present, link the URL), `—` (not on platform), `?` (fetch failed).
-- repo: `✓ existing`, `+ created` (this run), `partial` (file exists but missing a URL the platforms have), `—`.
-
-Below the table list, briefly:
-
-- per-chapter fetch errors (if any),
+Below the table:
+- per-group fetch errors (if any),
 - files created (paths),
 - files that need the user to add `locationGmapsUrl` / `locationOpenStreetUrl`,
-- whether `npm run prepare` succeeded.
-- inform the user that they need to review and provide the location URLs!
+- whether `npm run prepare` succeeded,
+- explicit reminder: review every created file and add the map URLs.
 
 ## Boundaries
 
-- Do not modify existing MDX files except when the user explicitly approves enrichment of empty `urlMeetup`/`urlBevy`.
-- Do not delete any files, even if a meetup was cancelled on the platforms.
+- Do not modify existing MDX files unless the user explicitly asks.
+- Do not delete any files, even if a meetup was cancelled on meetup.com.
 - Do not commit or push.
-- Past events (date < today) are out of scope — neither fetch nor create.
-- If the user names a chapter slug that has no folder under `cna/src/pages/`, stop and ask: this skill does not bootstrap new chapters (see `CONTRIBUTING.md`).
+- Past events (`date < today`) are out of scope — neither create nor report.
+- If a chapter slug in the config has no folder under `cna/src/pages/`, stop and ask: this skill does not bootstrap new chapters.
+- Do not call `community.cncf.io` or WebFetch meetup pages directly. The script is the only data source.
