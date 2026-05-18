@@ -1,1 +1,164 @@
-[]
+[
+  {
+    "chapter": "graz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/graz/20260521.mdx",
+    "frontMatter": {
+      "date": "2026-05-21",
+      "id": 20260521,
+      "location": "tba",
+      "locationAddress": "",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "7pm",
+      "timeStart": "5pm",
+      "title": "CNCG Graz Meetup, May 2026 with RedHat",
+      "urlBevy": "https://community.cncf.io/events/details/cncf-cloud-native-graz-presents-cncg-graz-meetup-may-2026-with-redhat/",
+      "urlMeetup": "https://www.meetup.com/cncf-graz/events/313382593/"
+    }
+  },
+  {
+    "chapter": "graz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/graz/20260618.mdx",
+    "frontMatter": {
+      "date": "2026-06-18",
+      "id": 20260618,
+      "location": "Denovo",
+      "locationAddress": "",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "7pm",
+      "timeStart": "5pm",
+      "title": "CNCG Graz Meetup, June 2026 @ Denovo",
+      "urlBevy": "https://community.cncf.io/events/details/cncf-cloud-native-graz-presents-cncg-graz-meetup-june-2026-denovo/",
+      "urlMeetup": "https://www.meetup.com/cncf-graz/events/313382630/"
+    }
+  },
+  {
+    "chapter": "linz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/linz/20260526.mdx",
+    "frontMatter": {
+      "date": "2026-05-26",
+      "id": 20260526,
+      "location": "",
+      "locationAddress": "",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "8:30 pm",
+      "timeStart": "5:30 pm",
+      "title": "Cloud Native Linz - May/2026",
+      "urlMeetup": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+    }
+  },
+  {
+    "chapter": "linz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/linz/20260526.mdx",
+    "frontMatter": {
+      "date": "2026-05-26",
+      "id": 20260526,
+      "location": "",
+      "locationAddress": "",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "8:30 pm",
+      "timeStart": "5:30 pm",
+      "title": "Cloud Native Linz - May/2026",
+      "urlMeetup": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+    }
+  },
+  {
+    "chapter": "linz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/linz/20260526.mdx",
+    "frontMatter": {
+      "date": "2026-05-26",
+      "id": 20260526,
+      "location": "",
+      "locationAddress": "",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "8:30 pm",
+      "timeStart": "5:30 pm",
+      "title": "Cloud Native Linz - May/2026",
+      "urlMeetup": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+    }
+  },
+  {
+    "chapter": "linz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/linz/20260526.mdx",
+    "frontMatter": {
+      "date": "2026-05-26",
+      "id": 20260526,
+      "location": "",
+      "locationAddress": "",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "8:30 pm",
+      "timeStart": "5:30 pm",
+      "title": "Cloud Native Linz - May/2026",
+      "urlMeetup": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+    }
+  },
+  {
+    "chapter": "linz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/linz/20260526.mdx",
+    "frontMatter": {
+      "date": "2026-05-26",
+      "id": 20260526,
+      "location": "",
+      "locationAddress": "",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "8:30 pm",
+      "timeStart": "5:30 pm",
+      "title": "Cloud Native Linz - May/2026",
+      "urlMeetup": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+    }
+  },
+  {
+    "chapter": "linz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/linz/20260526.mdx",
+    "frontMatter": {
+      "date": "2026-05-26",
+      "id": 20260526,
+      "location": "",
+      "locationAddress": "",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "8:30 pm",
+      "timeStart": "5:30 pm",
+      "title": "Cloud Native Linz - May/2026",
+      "urlMeetup": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+    }
+  },
+  {
+    "chapter": "linz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/linz/20260526.mdx",
+    "frontMatter": {
+      "date": "2026-05-26",
+      "id": 20260526,
+      "location": "",
+      "locationAddress": "",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "8:30 pm",
+      "timeStart": "5:30 pm",
+      "title": "Cloud Native Linz - May/2026",
+      "urlMeetup": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+    }
+  },
+  {
+    "chapter": "linz",
+    "file": "/Users/drackthor/code/repos/drackthor/cna-website/cna/src/pages/linz/20260526.mdx",
+    "frontMatter": {
+      "date": "2026-05-26",
+      "id": 20260526,
+      "location": "",
+      "locationAddress": "",
+      "locationGmapsUrl": "",
+      "locationOpenStreetUrl": "",
+      "timeEnd": "8:30 pm",
+      "timeStart": "5:30 pm",
+      "title": "Cloud Native Linz - May/2026",
+      "urlMeetup": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+    }
+  }
+]

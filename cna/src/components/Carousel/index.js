@@ -1,88 +1,108 @@
-import styles from './styles.module.css';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import meetups from '@site/data/mdxFrontMatter.json';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styles from './styles.module.css';
 
-function Slide({logo, headline, date, location, url}) {
+function formatDate(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (Number.isNaN(d.getTime())) return iso;
+    return d.toLocaleDateString(undefined, {
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+    });
+}
+
+function Card({logo, headline, date, location, timeStart, timeEnd, url, chapter}) {
     return (
-        <div className={styles.slide}>
-            <div className={styles.slideIcon}>
-                <img className={styles.slideSVG} src={useBaseUrl(logo)} alt="logo"/>
+        <a className={styles.card} href={url} target="_blank" rel="noopener noreferrer">
+            <div className={styles.cardHeader}>
+                <img className={styles.cardLogo} src={useBaseUrl(logo)} alt={`${chapter} logo`}/>
+                <span className={styles.cardChapter}>{chapter}</span>
             </div>
-            <div className={styles.slideText}>
-                <div>
-                    <a href={url} target="_blank">
-                        <h2>{headline}</h2>
-                    </a>
-                    <p>{date}</p>
-                    <p>@{location}</p>
+            <h3 className={styles.cardTitle}>{headline}</h3>
+            <div className={styles.cardMeta}>
+                <div className={styles.cardDate}>
+                    <span className={styles.icon} aria-hidden="true">📅</span>
+                    <span>{formatDate(date)}</span>
                 </div>
+                {(timeStart || timeEnd) && (
+                    <div className={styles.cardTime}>
+                        <span className={styles.icon} aria-hidden="true">🕒</span>
+                        <span>{timeStart}{timeEnd ? ` – ${timeEnd}` : ''}</span>
+                    </div>
+                )}
+                {location && (
+                    <div className={styles.cardLocation}>
+                        <span className={styles.icon} aria-hidden="true">📍</span>
+                        <span>{location}</span>
+                    </div>
+                )}
             </div>
-        </div>
+        </a>
     );
 }
 
 export default function Carousel() {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const upcoming = meetups
+        .filter((m) => {
+            const d = new Date(m.frontMatter.date);
+            return !Number.isNaN(d.getTime()) && d >= today;
+        })
+        .sort((a, b) => new Date(a.frontMatter.date) - new Date(b.frontMatter.date));
+
+    if (upcoming.length === 0) return null;
+
+    const count = upcoming.length;
+    const cap = (n) => Math.min(n, count);
+
     const settings = {
-        dots: true,
-        infinite: true,
-        autoplay: true,
-        speed: 1000,
-        // slidesToShow: 3,
+        dots: count > 1,
+        arrows: count > 1,
+        infinite: count > 5,
+        autoplay: count > 1,
+        autoplaySpeed: 6000,
+        speed: 600,
+        slidesToShow: cap(4),
+        slidesToScroll: 1,
         responsive: [
-            {
-                breakpoint: 8192,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                }
-            },
-            {
-                breakpoint: 2048,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            },
+            {breakpoint: 1600, settings: {slidesToShow: cap(4), slidesToScroll: 1, infinite: count > 5}},
+            {breakpoint: 1280, settings: {slidesToShow: cap(3), slidesToScroll: 1, infinite: count > 3}},
+            {breakpoint: 960, settings: {slidesToShow: cap(2), slidesToScroll: 1, infinite: count > 2}},
+            {breakpoint: 640, settings: {slidesToShow: 1, slidesToScroll: 1, infinite: count > 1}},
         ],
-        centerMode: true,
-        centerPadding: '20px',
-        // slidesToScroll: 3,
-        waitForAnimate: false,
-        adaptiveHeight: false,
     };
 
     return (
-        <div className={styles.base}>
+        <section className={styles.base}>
             <div className="container">
-                <Slider {...settings}>
-                    {meetups.map((meetup) => (
-                        <Slide
-                            logo={`/img/${meetup.chapter}.png`}
-                            headline={meetup.frontMatter.title}
-                            date={meetup.frontMatter.date}
-                            location={meetup.frontMatter.location}
-                            url={`${meetup.chapter}/${meetup.frontMatter.id}`}/>
-                    ))}
-                </Slider>
+                <h2 className={styles.heading}>Upcoming Meetups</h2>
+                <div className={styles.sliderWrap}>
+                    <Slider {...settings}>
+                        {upcoming.map((meetup) => (
+                            <div key={`${meetup.chapter}-${meetup.frontMatter.id}`} className={styles.slide}>
+                                <Card
+                                    logo={`/img/${meetup.chapter}.png`}
+                                    headline={meetup.frontMatter.title}
+                                    date={meetup.frontMatter.date}
+                                    timeStart={meetup.frontMatter.timeStart}
+                                    timeEnd={meetup.frontMatter.timeEnd}
+                                    location={meetup.frontMatter.location}
+                                    chapter={meetup.chapter}
+                                    url={`${meetup.chapter}/${meetup.frontMatter.id}`}
+                                />
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
             </div>
-        </div>
+        </section>
     );
 }

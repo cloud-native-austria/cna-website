@@ -1,0 +1,16 @@
+{
+  "groups": [
+    {
+      "chapter": "vienna",
+      "meetupGroup": "cloud-native-computing-vienna"
+    },
+    {
+      "chapter": "graz",
+      "meetupGroup": "cncf-graz"
+    },
+    {
+      "chapter": "linz",
+      "meetupGroup": "cloud-native-linz"
+    }
+  ]
+}

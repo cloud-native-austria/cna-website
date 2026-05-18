@@ -137,3 +137,5 @@ dist
 
 # nix
 .direnv/
+.devenv/
+.devenv.flake.nix

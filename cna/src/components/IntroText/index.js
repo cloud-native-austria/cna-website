@@ -21,7 +21,7 @@ const CardGrid = () => {
                 Have know-how to share or an idea to present? We have the event!
                 <a href="https://sessionize.com/cloud-native-austria-meetups" className={styles.cfpButton}
                    target="_blank">
-                    submit your session here
+                    Submit your session →
                 </a>
             </p>
 
