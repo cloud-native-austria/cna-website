@@ -16,6 +16,22 @@ const CardGrid = () => {
             image: "/img/Whizus.png",
             text: "WhizUs",
             link: "https://www.whizus.com/",
+        }, {
+            image: "/img/tsclabs.webp",
+            text: "TSC Labs",
+            link: "https://www.tsc-labs.eu/",
+        }, {
+            image: "/img/nuki.jpg",
+            text: "Nuki",
+            link: "https://www.nuki.io/",
+        }, {
+            image: "/img/go-e_Logo-blau.svg",
+            text: "go-e",
+            link: "https://www.go-e.com/",
+        }, {
+            image: "/img/fullstacks.svg",
+            text: "FULLSTACKS",
+            link: "https://www.fullstacks.io/",
         },
     ];
 

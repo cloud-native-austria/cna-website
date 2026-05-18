@@ -1,0 +1,209 @@
+{
+  "fetchedAt": "2026-05-17T11:29:43.189Z",
+  "groups": [
+    {
+      "chapter": "vienna",
+      "events": [],
+      "meetupGroup": "cloud-native-computing-vienna",
+      "rssUrl": "https://www.meetup.com/cloud-native-computing-vienna/events/rss"
+    },
+    {
+      "chapter": "graz",
+      "events": [
+        {
+          "date": "2026-05-21",
+          "dateEnd": "",
+          "description": "Cloud Native Community Group Graz\ntba",
+          "ical": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Meetup//Meetup Calendar 1.0//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nNAME:Cloud Native Community Group Graz\r\nX-WR-CALNAME:Cloud Native Community Group Graz\r\nBEGIN:VTIMEZONE\r\nTZID:Europe/Vienna\r\nTZURL:http://tzurl.org/zoneinfo-outlook/Europe/Vienna\r\nX-LIC-LOCATION:Europe/Vienna\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:+0100\r\nTZOFFSETTO:+0200\r\nTZNAME:CEST\r\nDTSTART:19700329T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:+0200\r\nTZOFFSETTO:+0100\r\nTZNAME:CET\r\nDTSTART:19701025T030000\r\nRRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nBEGIN:VEVENT\r\nUID:event_313382593@meetup.com\r\nSEQUENCE:1\r\nDTSTAMP:20260517T112942Z\r\nDTSTART;TZID=Europe/Vienna:20260521T170000\r\nDTEND;TZID=Europe/Vienna:20260521T190000\r\nSUMMARY:CNCG Graz Meetup - May 2026 with RedHat\r\nDESCRIPTION:Cloud Native Community Group Graz\\ntba\r\nURL;VALUE=URI:https://www.meetup.com/cncf-graz/events/313382593/\r\nSTATUS:CONFIRMED\r\nCREATED:20260216T140428Z\r\nLAST-MODIFIED:20260216T140428Z\r\nCLASS:PUBLIC\r\nEND:VEVENT\r\nX-ORIGINAL-URL:https://www.meetup.com/cncf-graz/events/ical/Cloud+Native C\r\n ommunity Group Graz.ics\r\nX-WR-CALNAME:Cloud Native Community Group Graz\r\nEND:VCALENDAR",
+          "icalUrl": "https://www.meetup.com/cncf-graz/events/313382593/ical",
+          "location": "",
+          "parsed": [
+            {
+              "date": "2026-05-21",
+              "dateEnd": "",
+              "description": "Cloud Native Community Group Graz\ntba",
+              "location": "",
+              "raw": {
+                "CLASS": "PUBLIC",
+                "CREATED": {
+                  "params": {},
+                  "value": "20260216T140428Z"
+                },
+                "DESCRIPTION": "Cloud Native Community Group Graz\ntba",
+                "DTEND": {
+                  "params": {
+                    "TZID": "Europe/Vienna"
+                  },
+                  "value": "20260521T190000"
+                },
+                "DTSTAMP": {
+                  "params": {},
+                  "value": "20260517T112942Z"
+                },
+                "DTSTART": {
+                  "params": {
+                    "TZID": "Europe/Vienna"
+                  },
+                  "value": "20260521T170000"
+                },
+                "LAST-MODIFIED": {
+                  "params": {},
+                  "value": "20260216T140428Z"
+                },
+                "SEQUENCE": "1",
+                "STATUS": "CONFIRMED",
+                "SUMMARY": "CNCG Graz Meetup - May 2026 with RedHat",
+                "UID": "event_313382593@meetup.com",
+                "URL": "https://www.meetup.com/cncf-graz/events/313382593/"
+              },
+              "timeEnd": "7:00 pm",
+              "timeStart": "5:00 pm",
+              "timezone": "Europe/Vienna",
+              "title": "CNCG Graz Meetup - May 2026 with RedHat",
+              "uid": "event_313382593@meetup.com",
+              "url": "https://www.meetup.com/cncf-graz/events/313382593/"
+            }
+          ],
+          "timeEnd": "7:00 pm",
+          "timeStart": "5:00 pm",
+          "timezone": "Europe/Vienna",
+          "title": "CNCG Graz Meetup - May 2026 with RedHat",
+          "uid": "event_313382593@meetup.com",
+          "url": "https://www.meetup.com/cncf-graz/events/313382593/"
+        },
+        {
+          "date": "2026-06-18",
+          "dateEnd": "",
+          "description": "Cloud Native Community Group Graz\ntba",
+          "ical": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Meetup//Meetup Calendar 1.0//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nNAME:Cloud Native Community Group Graz\r\nX-WR-CALNAME:Cloud Native Community Group Graz\r\nBEGIN:VTIMEZONE\r\nTZID:Europe/Vienna\r\nTZURL:http://tzurl.org/zoneinfo-outlook/Europe/Vienna\r\nX-LIC-LOCATION:Europe/Vienna\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:+0100\r\nTZOFFSETTO:+0200\r\nTZNAME:CEST\r\nDTSTART:19700329T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:+0200\r\nTZOFFSETTO:+0100\r\nTZNAME:CET\r\nDTSTART:19701025T030000\r\nRRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nBEGIN:VEVENT\r\nUID:event_313382630@meetup.com\r\nSEQUENCE:1\r\nDTSTAMP:20260517T112942Z\r\nDTSTART;TZID=Europe/Vienna:20260618T170000\r\nDTEND;TZID=Europe/Vienna:20260618T190000\r\nSUMMARY:CNCG Graz Meetup - June 2026 @ Denovo\r\nDESCRIPTION:Cloud Native Community Group Graz\\ntba\r\nURL;VALUE=URI:https://www.meetup.com/cncf-graz/events/313382630/\r\nSTATUS:CONFIRMED\r\nCREATED:20260216T140932Z\r\nLAST-MODIFIED:20260216T140932Z\r\nCLASS:PUBLIC\r\nEND:VEVENT\r\nX-ORIGINAL-URL:https://www.meetup.com/cncf-graz/events/ical/Cloud+Native C\r\n ommunity Group Graz.ics\r\nX-WR-CALNAME:Cloud Native Community Group Graz\r\nEND:VCALENDAR",
+          "icalUrl": "https://www.meetup.com/cncf-graz/events/313382630/ical",
+          "location": "",
+          "parsed": [
+            {
+              "date": "2026-06-18",
+              "dateEnd": "",
+              "description": "Cloud Native Community Group Graz\ntba",
+              "location": "",
+              "raw": {
+                "CLASS": "PUBLIC",
+                "CREATED": {
+                  "params": {},
+                  "value": "20260216T140932Z"
+                },
+                "DESCRIPTION": "Cloud Native Community Group Graz\ntba",
+                "DTEND": {
+                  "params": {
+                    "TZID": "Europe/Vienna"
+                  },
+                  "value": "20260618T190000"
+                },
+                "DTSTAMP": {
+                  "params": {},
+                  "value": "20260517T112942Z"
+                },
+                "DTSTART": {
+                  "params": {
+                    "TZID": "Europe/Vienna"
+                  },
+                  "value": "20260618T170000"
+                },
+                "LAST-MODIFIED": {
+                  "params": {},
+                  "value": "20260216T140932Z"
+                },
+                "SEQUENCE": "1",
+                "STATUS": "CONFIRMED",
+                "SUMMARY": "CNCG Graz Meetup - June 2026 @ Denovo",
+                "UID": "event_313382630@meetup.com",
+                "URL": "https://www.meetup.com/cncf-graz/events/313382630/"
+              },
+              "timeEnd": "7:00 pm",
+              "timeStart": "5:00 pm",
+              "timezone": "Europe/Vienna",
+              "title": "CNCG Graz Meetup - June 2026 @ Denovo",
+              "uid": "event_313382630@meetup.com",
+              "url": "https://www.meetup.com/cncf-graz/events/313382630/"
+            }
+          ],
+          "timeEnd": "7:00 pm",
+          "timeStart": "5:00 pm",
+          "timezone": "Europe/Vienna",
+          "title": "CNCG Graz Meetup - June 2026 @ Denovo",
+          "uid": "event_313382630@meetup.com",
+          "url": "https://www.meetup.com/cncf-graz/events/313382630/"
+        }
+      ],
+      "meetupGroup": "cncf-graz",
+      "rssUrl": "https://www.meetup.com/cncf-graz/events/rss"
+    },
+    {
+      "chapter": "linz",
+      "events": [
+        {
+          "date": "2026-05-26",
+          "dateEnd": "",
+          "description": "Cloud Native Linz\nWe are excited to host the May 2026 edition of the Cloud Native Linz meetup!\nWe'd like to thank [Dynatrace](https://www.dynatrace.com/) for hosting the Meetup!\n\n###\n\n**More Information**\nFind more information also on [cloudnativelinz.at](https://cloudnativelinz.at)!\n\nHere's what to expect at our meetups.\n17:30 Doors open\n18:00 Opening by organizers\n18:10 First speaker (talk + Q&A)\n18:45 Break & networking\n19:00 Second speaker (talk + Q&A)\n19:45 Extended networking, raffle & discussions",
+          "ical": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Meetup//Meetup Calendar 1.0//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nNAME:Cloud Native Linz\r\nX-WR-CALNAME:Cloud Native Linz\r\nBEGIN:VTIMEZONE\r\nTZID:Europe/Vienna\r\nTZURL:http://tzurl.org/zoneinfo-outlook/Europe/Vienna\r\nX-LIC-LOCATION:Europe/Vienna\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:+0100\r\nTZOFFSETTO:+0200\r\nTZNAME:CEST\r\nDTSTART:19700329T020000\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:+0200\r\nTZOFFSETTO:+0100\r\nTZNAME:CET\r\nDTSTART:19701025T030000\r\nRRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nBEGIN:VEVENT\r\nUID:event_314672208@meetup.com\r\nSEQUENCE:1\r\nDTSTAMP:20260517T112943Z\r\nDTSTART;TZID=Europe/Vienna:20260526T173000\r\nDTEND;TZID=Europe/Vienna:20260526T203000\r\nSUMMARY:Cloud Native Linz - May/2026\r\nDESCRIPTION:Cloud Native Linz\\nWe are excited to host the May 2026 edition\r\n  of the Cloud Native Linz meetup!\\nWe'd like to thank [Dynatrace](https://\r\n www.dynatrace.com/) for hosting the Meetup!\\n\\n###\\n\\n**More Information**\r\n \\nFind more information also on [cloudnativelinz.at](https://cloudnativeli\r\n nz.at)!\\n\\nHere's what to expect at our meetups.\\n17:30 Doors open\\n18:00 \r\n Opening by organizers\\n18:10 First speaker (talk + Q&A)\\n18:45 Break & net\r\n working\\n19:00 Second speaker (talk + Q&A)\\n19:45 Extended networking\\, ra\r\n ffle & discussions\r\nURL;VALUE=URI:https://www.meetup.com/cloud-native-linz/events/314672208/\r\nSTATUS:CONFIRMED\r\nCREATED:20260507T082112Z\r\nLAST-MODIFIED:20260507T082112Z\r\nCLASS:PUBLIC\r\nEND:VEVENT\r\nX-ORIGINAL-URL:https://www.meetup.com/cloud-native-linz/events/ical/Cloud+\r\n Native Linz.ics\r\nX-WR-CALNAME:Cloud Native Linz\r\nEND:VCALENDAR",
+          "icalUrl": "https://www.meetup.com/cloud-native-linz/events/314672208/ical",
+          "location": "",
+          "parsed": [
+            {
+              "date": "2026-05-26",
+              "dateEnd": "",
+              "description": "Cloud Native Linz\nWe are excited to host the May 2026 edition of the Cloud Native Linz meetup!\nWe'd like to thank [Dynatrace](https://www.dynatrace.com/) for hosting the Meetup!\n\n###\n\n**More Information**\nFind more information also on [cloudnativelinz.at](https://cloudnativelinz.at)!\n\nHere's what to expect at our meetups.\n17:30 Doors open\n18:00 Opening by organizers\n18:10 First speaker (talk + Q&A)\n18:45 Break & networking\n19:00 Second speaker (talk + Q&A)\n19:45 Extended networking, raffle & discussions",
+              "location": "",
+              "raw": {
+                "CLASS": "PUBLIC",
+                "CREATED": {
+                  "params": {},
+                  "value": "20260507T082112Z"
+                },
+                "DESCRIPTION": "Cloud Native Linz\nWe are excited to host the May 2026 edition of the Cloud Native Linz meetup!\nWe'd like to thank [Dynatrace](https://www.dynatrace.com/) for hosting the Meetup!\n\n###\n\n**More Information**\nFind more information also on [cloudnativelinz.at](https://cloudnativelinz.at)!\n\nHere's what to expect at our meetups.\n17:30 Doors open\n18:00 Opening by organizers\n18:10 First speaker (talk + Q&A)\n18:45 Break & networking\n19:00 Second speaker (talk + Q&A)\n19:45 Extended networking, raffle & discussions",
+                "DTEND": {
+                  "params": {
+                    "TZID": "Europe/Vienna"
+                  },
+                  "value": "20260526T203000"
+                },
+                "DTSTAMP": {
+                  "params": {},
+                  "value": "20260517T112943Z"
+                },
+                "DTSTART": {
+                  "params": {
+                    "TZID": "Europe/Vienna"
+                  },
+                  "value": "20260526T173000"
+                },
+                "LAST-MODIFIED": {
+                  "params": {},
+                  "value": "20260507T082112Z"
+                },
+                "SEQUENCE": "1",
+                "STATUS": "CONFIRMED",
+                "SUMMARY": "Cloud Native Linz - May/2026",
+                "UID": "event_314672208@meetup.com",
+                "URL": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+              },
+              "timeEnd": "8:30 pm",
+              "timeStart": "5:30 pm",
+              "timezone": "Europe/Vienna",
+              "title": "Cloud Native Linz - May/2026",
+              "uid": "event_314672208@meetup.com",
+              "url": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+            }
+          ],
+          "timeEnd": "8:30 pm",
+          "timeStart": "5:30 pm",
+          "timezone": "Europe/Vienna",
+          "title": "Cloud Native Linz - May/2026",
+          "uid": "event_314672208@meetup.com",
+          "url": "https://www.meetup.com/cloud-native-linz/events/314672208/"
+        }
+      ],
+      "meetupGroup": "cloud-native-linz",
+      "rssUrl": "https://www.meetup.com/cloud-native-linz/events/rss"
+    }
+  ],
+  "timezone": "Europe/Vienna"
+}
