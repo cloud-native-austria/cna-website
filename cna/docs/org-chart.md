@@ -11,7 +11,7 @@ The Board of Directors provides strategic leadership and ensures the association
   - Leads the association and oversees all operational aspects.
 - **Secretary**: Daniel Drack
   - Handles all administrative duties including meeting minutes and correspondence.
-- **Treasurer**: Thomas Stagl
+- **Treasurer**: Johannes Grumböck
   - Manages the finances of the association, including budgeting and financial reporting.
 
 ## Deputy Roles
@@ -20,18 +20,24 @@ Deputy roles are designed to assist and step in for their primary counterparts a
 
 - **Deputy Chairman**: Thomas Schütz
   - Assists the Chairman and substitutes when the Chairman is unavailable.
-- **Deputy Secretary**: vacant
+- **Deputy Secretary**: Octavian Helm
   - Supports the Secretary in all administrative tasks and acts as a substitute when required.
-- **Deputy Treasurer**: Johannes Grumböck
+- **Deputy Treasurer**: vacant
   - Aids the Treasurer in managing the association's financial tasks and assumes responsibilities in their absence.
 
 ## Auditors
 
 Auditors are responsible for reviewing the association's accounts to ensure accuracy and compliance with legal standards.
 
-- **Auditor 1**: Constanze Roedig
-- **Auditor 2**: Andreas Grabner
+- **Auditor 1**: external accountant
+- **Auditor 2**: external accountant
 
 ## Friends of Cloud Native Austria
 
 - Exoscale
+- WhizUs
+- FULLSTACKS
+- TSC Labs
+- Nuki
+- go-e
+- Dynatrace
