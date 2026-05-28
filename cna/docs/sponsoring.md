@@ -2,13 +2,13 @@
 
 **Are you a company looking to contribute to the Austrian cloud-native community?**
 
-<p>
+<div style={{textAlign: 'center', margin: '2rem 0'}}>
     <a
         href="https://docs.google.com/forms/d/e/1FAIpQLScmDlCEdiwhpdk8AO2urU9bnZHDNjNbebbQUpeM00chcTwxog/viewform?usp=header"
         target="_blank"
         className="button button--primary button--lg"
     >Become a Friend of Cloud-Native Austria 🇦🇹</a>
-</p>
+</div>
 
 Join us as a **Friend of Cloud Native Austria** and help support the growth and development of cloud-native technologies and practices across Austria.
 Your commitment as a sponsor will enable us to continue providing valuable resources, networking opportunities, and educational events tailored to professionals and enthusiasts in the cloud-native ecosystem.
@@ -47,10 +47,10 @@ Need a shiny sponsor prospectus?
 Have a look [here](./assets/CNA-Sponsor-Prospectus.pdf)!
 We look forward to partnering with you and building a stronger cloud-native community together!
 
-<p>
+<div style={{textAlign: 'center', margin: '2rem 0'}}>
     <a
         href="https://docs.google.com/forms/d/e/1FAIpQLScmDlCEdiwhpdk8AO2urU9bnZHDNjNbebbQUpeM00chcTwxog/viewform?usp=header"
         target="_blank"
         className="button button--primary button--lg"
     >Become a Friend of Cloud-Native Austria 🇦🇹</a>
-</p>
+</div>
